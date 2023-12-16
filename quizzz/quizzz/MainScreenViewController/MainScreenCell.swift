@@ -2,7 +2,7 @@
 import UIKit
 
 final class MainScreenCell: UICollectionViewCell{
-    struct  Info {
+    struct Info {
         let title: String
         let description: String
     }
