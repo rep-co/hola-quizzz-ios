@@ -8,7 +8,7 @@
 import Foundation
 
 enum QuestionStatusCellType {
-    case succes
+    case success
     case error
     case selected
     case empty

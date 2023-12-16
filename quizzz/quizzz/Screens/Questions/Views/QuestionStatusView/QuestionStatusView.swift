@@ -16,7 +16,7 @@ final class QuestionStatusView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubviews()
+        setupConstraints()
         setupCollectionView()
     }
     
@@ -25,7 +25,7 @@ final class QuestionStatusView: UIView {
     }
     
     func nextStep(with flag: Bool) {
-        answerTypes.append(flag ? .succes : .error)
+        answerTypes.append(flag ? .success : .error)
         collectionView.reloadData()
         let indexPath = IndexPath(row: answerTypes.count, section: 0)
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
@@ -45,7 +45,7 @@ final class QuestionStatusView: UIView {
         collectionView.dataSource = self
     }
     
-    private func addSubviews() {
+    private func setupConstraints() {
         addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -59,7 +59,6 @@ final class QuestionStatusView: UIView {
 }
 
 // MARK: - FlowLayout Delegate
-
 extension QuestionStatusView: UICollectionViewDelegateFlowLayout {
     func collectionView(
         _ collectionView: UICollectionView,
@@ -78,11 +77,9 @@ extension QuestionStatusView: UICollectionViewDelegateFlowLayout {
 }
 
 // MARK: - CollectionView Delegate
-
 extension QuestionStatusView: UICollectionViewDelegate {}
 
 // MARK: - CollectionView DataSource
-
 extension QuestionStatusView: UICollectionViewDataSource {
     func collectionView(
         _ collectionView: UICollectionView,
@@ -111,7 +108,6 @@ extension QuestionStatusView: UICollectionViewDataSource {
 }
 
 // MARK: - Factory
-
 extension QuestionStatusView {
     private func makeCollectionView() -> UICollectionView {
         let layout = TopAlignedCollectionViewFlowLayout()
@@ -129,6 +125,7 @@ extension QuestionStatusView {
     }
 }
 
+// MARK: - Const
 extension QuestionStatusView {
     private struct Const {
         struct Size {

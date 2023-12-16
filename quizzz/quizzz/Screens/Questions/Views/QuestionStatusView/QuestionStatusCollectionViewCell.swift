@@ -26,7 +26,7 @@ final class QuestionStatusCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
-        addSubviews()
+        setupConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -52,7 +52,7 @@ final class QuestionStatusCollectionViewCell: UICollectionViewCell {
     
     private func setupForType(_ type: QuestionStatusCellType) {
         switch type {
-        case .succes:
+        case .success:
             backgroundColor = .repcoGreen
             numberLabel.isHidden = true
         case .error:
@@ -69,7 +69,6 @@ final class QuestionStatusCollectionViewCell: UICollectionViewCell {
 }
 
 // MARK: - Setup UI
-
 extension QuestionStatusCollectionViewCell {
     private func setupUI() {
         layer.cornerRadius = 8
@@ -79,7 +78,7 @@ extension QuestionStatusCollectionViewCell {
         setupForType(.empty)
     }
     
-    private func addSubviews() {
+    private func setupConstraints() {
         contentView.addSubview(numberLabel)
         numberLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -93,7 +92,6 @@ extension QuestionStatusCollectionViewCell {
 }
 
 // MARK: - Factory
-
 extension QuestionStatusCollectionViewCell {
     private func makeNumberLabel() -> UILabel {
         let label = UILabel()
