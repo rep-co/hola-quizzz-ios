@@ -1,11 +1,11 @@
 
 import UIKit
+
 final class MainScreenCell: UICollectionViewCell{
     struct  Info {
-        var title: String
-        var description: String
+        let title: String
+        let description: String
     }
-    
     var data: Info? {
         didSet {
             guard let data else { return }
@@ -13,7 +13,7 @@ final class MainScreenCell: UICollectionViewCell{
             descriptionLabel.text = data.description
         }
     }
-    
+
     private let  titleLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 17)
@@ -30,19 +30,14 @@ final class MainScreenCell: UICollectionViewCell{
         label.textColor = .black
         return label
     }()
-    
+
     static let identifier = "MainScreenCell"
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        contentView.backgroundColor = .white
-        contentView.addSubview(descriptionLabel)
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(titleLabel)
+        addSubviews()
         setupConstraints()
-        clipsToBounds = true
-        layer.masksToBounds  = true
+
     }
     
     required init?(coder: NSCoder) {
@@ -51,17 +46,30 @@ final class MainScreenCell: UICollectionViewCell{
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        layer.cornerRadius = 16
+        setupUI()
     }
 }
 
 private extension MainScreenCell {
+     func addSubviews() {
+         contentView.addSubview(descriptionLabel)
+         titleLabel.translatesAutoresizingMaskIntoConstraints = false
+         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+         contentView.addSubview(titleLabel)
+    }
+    func setupUI(){
+        layer.cornerRadius = 16
+        clipsToBounds = true
+        layer.masksToBounds  = true
+        contentView.backgroundColor = .white
+    }
+
     func setupConstraints() {
         NSLayoutConstraint.activate([
             titleLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -10),
             titleLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 10),
             titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 7),
-            
+
             descriptionLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -10),
             descriptionLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 10),
             descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
