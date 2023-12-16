@@ -1,0 +1,6 @@
+module Pods_quizzz {
+  umbrella header "Pods-quizzz-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+module FlyingEmojis {
+  umbrella header "FlyingEmojis-umbrella.h"
+
+  export *
+  module * { export * }
+}

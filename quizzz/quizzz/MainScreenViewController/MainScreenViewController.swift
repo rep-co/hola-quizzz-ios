@@ -33,7 +33,7 @@ final class MainScreenViewController: UIViewController {
     }
     
     func setupImageView(){
-        imageView.image = .logo
+//        imageView.image = .logo
     }
     
     func addSubvievs(){
