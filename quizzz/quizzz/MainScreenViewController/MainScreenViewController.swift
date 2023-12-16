@@ -45,7 +45,7 @@ final class MainScreenViewController: UIViewController,  UICollectionViewDataSou
 
     func setupTitleLabel(){
         titleLabel.textColor = .black
-        titleLabel.text = "SELECT PACK"
+        titleLabel.text = Text.selectPack.rawValue
         titleLabel.textAlignment = .center
         titleLabel.font = .systemFont(ofSize: 30)
     }
@@ -125,5 +125,11 @@ extension MainScreenViewController{
         else { return UICollectionViewCell() }
         cell.data = self.data[indexPath.row]
         return cell
+    }
+}
+
+extension MainScreenViewController {
+    enum Text: String {
+       case selectPack = "SELECT PACK"
     }
 }

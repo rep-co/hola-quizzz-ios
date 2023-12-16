@@ -2,10 +2,6 @@
 import UIKit
 
 final class MainScreenCell: UICollectionViewCell{
-    struct Info {
-        let title: String
-        let description: String
-    }
     var data: Info? {
         didSet {
             guard let data else { return }
@@ -35,18 +31,11 @@ final class MainScreenCell: UICollectionViewCell{
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubviews()
-        setupConstraints()
-
+        setupUI()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        setupUI()
     }
 }
 
@@ -62,6 +51,9 @@ private extension MainScreenCell {
         clipsToBounds = true
         layer.masksToBounds  = true
         contentView.backgroundColor = .white
+
+        addSubviews()
+        setupConstraints()
     }
 
     func setupConstraints() {
@@ -75,5 +67,12 @@ private extension MainScreenCell {
             descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
             descriptionLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10)
         ])
+    }
+}
+
+extension MainScreenCell{
+    struct Info {
+        let title: String
+        let description: String
     }
 }
