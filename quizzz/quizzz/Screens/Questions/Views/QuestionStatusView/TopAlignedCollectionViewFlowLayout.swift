@@ -8,7 +8,6 @@
 import UIKit
 
 final class TopAlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
-    
     // Здесь магия
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         let attributes = super.layoutAttributesForElements(in: rect)?
