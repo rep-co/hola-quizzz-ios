@@ -14,6 +14,10 @@
 		A676A2B22B2D9A54002DA5F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A676A2B12B2D9A54002DA5F4 /* Assets.xcassets */; };
 		A676A2B52B2D9A54002DA5F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A676A2B32B2D9A54002DA5F4 /* LaunchScreen.storyboard */; };
 		A7F247622B2DCC0B00A267E5 /* MainScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F247612B2DCC0B00A267E5 /* MainScreenCell.swift */; };
+		B4B317D42B2E0421005FA6C4 /* RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B317D32B2E0421005FA6C4 /* RuleView.swift */; };
+		B4B317D62B2E0474005FA6C4 /* RuleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B317D52B2E0474005FA6C4 /* RuleCollectionViewCell.swift */; };
+		B4B317D82B2E04D2005FA6C4 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B317D72B2E04D2005FA6C4 /* RulesViewController.swift */; };
+		B4B317DB2B2E0A44005FA6C4 /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B317DA2B2E0A44005FA6C4 /* Vibration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		A676A2B62B2D9A54002DA5F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7F247612B2DCC0B00A267E5 /* MainScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCell.swift; sourceTree = "<group>"; };
 		B4B317CD2B2DEEAA005FA6C4 /* FlyingEmojis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FlyingEmojis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4B317D32B2E0421005FA6C4 /* RuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleView.swift; sourceTree = "<group>"; };
+		B4B317D52B2E0474005FA6C4 /* RuleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleCollectionViewCell.swift; sourceTree = "<group>"; };
+		B4B317D72B2E04D2005FA6C4 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
+		B4B317DA2B2E0A44005FA6C4 /* Vibration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibration.swift; sourceTree = "<group>"; };
 		B83E7A68CCA3F8F04C24E6AC /* Pods-quizzz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quizzz.release.xcconfig"; path = "Target Support Files/Pods-quizzz/Pods-quizzz.release.xcconfig"; sourceTree = "<group>"; };
 		E18490FD38A729BBC0624AB7 /* libPods-quizzz.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-quizzz.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -73,9 +81,10 @@
 		A676A2A72B2D9A52002DA5F4 /* quizzz */ = {
 			isa = PBXGroup;
 			children = (
+				B4B317D92B2E0A36005FA6C4 /* Extension */,
 				A676A2A82B2D9A52002DA5F4 /* AppDelegate.swift */,
 				A676A2AA2B2D9A52002DA5F4 /* SceneDelegate.swift */,
-				A7F247602B2DCBEE00A267E5 /* MainScreenViewController */,
+				B4B317D12B2E03F7005FA6C4 /* Screens */,
 				A676A2B12B2D9A54002DA5F4 /* Assets.xcassets */,
 				A676A2B32B2D9A54002DA5F4 /* LaunchScreen.storyboard */,
 				A676A2B62B2D9A54002DA5F4 /* Info.plist */,
@@ -83,13 +92,40 @@
 			path = quizzz;
 			sourceTree = "<group>";
 		};
-		A7F247602B2DCBEE00A267E5 /* MainScreenViewController */ = {
+		A7F247602B2DCBEE00A267E5 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
 				A676A2AC2B2D9A52002DA5F4 /* MainScreenViewController.swift */,
 				A7F247612B2DCC0B00A267E5 /* MainScreenCell.swift */,
 			);
-			path = MainScreenViewController;
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		B4B317D12B2E03F7005FA6C4 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B4B317D22B2E0409005FA6C4 /* Rules */,
+				A7F247602B2DCBEE00A267E5 /* MainScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B4B317D22B2E0409005FA6C4 /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				B4B317D32B2E0421005FA6C4 /* RuleView.swift */,
+				B4B317D52B2E0474005FA6C4 /* RuleCollectionViewCell.swift */,
+				B4B317D72B2E04D2005FA6C4 /* RulesViewController.swift */,
+			);
+			path = Rules;
+			sourceTree = "<group>";
+		};
+		B4B317D92B2E0A36005FA6C4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B4B317DA2B2E0A44005FA6C4 /* Vibration.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		F099A1111B1E292A49332839 /* Pods */ = {
@@ -197,10 +233,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4B317DB2B2E0A44005FA6C4 /* Vibration.swift in Sources */,
+				B4B317D82B2E04D2005FA6C4 /* RulesViewController.swift in Sources */,
 				A676A2AD2B2D9A52002DA5F4 /* MainScreenViewController.swift in Sources */,
 				A7F247622B2DCC0B00A267E5 /* MainScreenCell.swift in Sources */,
+				B4B317D62B2E0474005FA6C4 /* RuleCollectionViewCell.swift in Sources */,
 				A676A2A92B2D9A52002DA5F4 /* AppDelegate.swift in Sources */,
 				A676A2AB2B2D9A52002DA5F4 /* SceneDelegate.swift in Sources */,
+				B4B317D42B2E0421005FA6C4 /* RuleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
