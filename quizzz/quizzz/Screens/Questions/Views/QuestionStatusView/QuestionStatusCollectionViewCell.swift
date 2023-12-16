@@ -8,7 +8,6 @@
 import UIKit
 
 final class QuestionStatusCollectionViewCell: UICollectionViewCell {
-    
     private(set) var type: QuestionStatusCellType = .empty {
         didSet {
             didChangeType(oldValue: oldValue, newValue: type)
