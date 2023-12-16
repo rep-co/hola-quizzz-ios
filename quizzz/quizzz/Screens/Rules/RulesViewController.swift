@@ -1,11 +1,11 @@
 import UIKit
 
 final class RulesViewController: UIViewController {
-    private var pageControl = UIPageControl()
-    private var nextButton = UIButton()
-    private var rulesCollectionView = UICollectionView(frame: .zero,
-                                                       collectionViewLayout: UICollectionViewLayout())
-    private var collectionViewLayout = UICollectionViewFlowLayout()
+    private let pageControl = UIPageControl()
+    private let nextButton = UIButton()
+    private lazy var rulesCollectionView = UICollectionView(frame: .zero,
+                                                       collectionViewLayout: collectionViewLayout)
+    private let collectionViewLayout = UICollectionViewFlowLayout()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,7 +72,6 @@ private extension RulesViewController {
         rulesCollectionView.dataSource = self
         rulesCollectionView.register(RuleCollectionViewCell.self,
                                      forCellWithReuseIdentifier: RuleCollectionViewCell.identifier)
-        rulesCollectionView.collectionViewLayout = collectionViewLayout
         rulesCollectionView.showsHorizontalScrollIndicator = false
         rulesCollectionView.isPagingEnabled = true
         rulesCollectionView.backgroundColor = .clear
