@@ -1,0 +1,559 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		57A4DF723BE9EBD3A18442105FB74B9C /* FlyingEmojis-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BA766335C567DD5416347EB9413AA25 /* FlyingEmojis-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5AEF0DBE6A2292C6B0DB541FA684E7AB /* FlyingEmojis-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F81AB94A369EB0539AA55374E88FBA9 /* FlyingEmojis-dummy.m */; };
+		5D424333F4E5912C46440E3FCD204A67 /* Pods-quizzz-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 498C7CF4C857AB620341CE86444F4DBB /* Pods-quizzz-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7EB8084080FB51ED5BAAF573E79B16CF /* UIImage+averageColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB6102F34106FBB98A60CA05EB576A /* UIImage+averageColor.swift */; };
+		82DE6A3505D8C43CE11F089998B25006 /* ParticleAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC41653468C142275D833B8D7DF004E6 /* ParticleAnimationView.swift */; };
+		85A430CA7BF1CDF485F92E115769C5FA /* String+toImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F070F57621F5B86CC4E1305B1571FF /* String+toImage.swift */; };
+		B6A61C5D644CA9554FC49B52748A585F /* FlyingEmojis.h in Headers */ = {isa = PBXBuildFile; fileRef = 91D93EEF58EABAE59DC4CF36EAA6C519 /* FlyingEmojis.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D691D5EFB733D37C6A5658C502FCBC62 /* Pods-quizzz-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E19714695BE9EA5984957A2B2F51CCE /* Pods-quizzz-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9846802BEA3C07CEAD6FDB15A7125FB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D3B1ABF893298784BF693B799B18327;
+			remoteInfo = FlyingEmojis;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0BA766335C567DD5416347EB9413AA25 /* FlyingEmojis-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlyingEmojis-umbrella.h"; sourceTree = "<group>"; };
+		0E19714695BE9EA5984957A2B2F51CCE /* Pods-quizzz-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-quizzz-dummy.m"; sourceTree = "<group>"; };
+		0F81AB94A369EB0539AA55374E88FBA9 /* FlyingEmojis-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FlyingEmojis-dummy.m"; sourceTree = "<group>"; };
+		1A2F71BE829829B30B33D6FA17787F48 /* FlyingEmojis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FlyingEmojis.debug.xcconfig; sourceTree = "<group>"; };
+		2D1EAB53B3F25AC9117E14970F391956 /* Pods-quizzz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-quizzz.release.xcconfig"; sourceTree = "<group>"; };
+		356B0589F741C1B2AF769C40FECCAAC5 /* Pods-quizzz */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-quizzz"; path = "libPods-quizzz.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		498C7CF4C857AB620341CE86444F4DBB /* Pods-quizzz-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-quizzz-umbrella.h"; sourceTree = "<group>"; };
+		4BF4E6C999EFA2D33537B1FF1332884D /* Pods-quizzz-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-quizzz-acknowledgements.plist"; sourceTree = "<group>"; };
+		51BB6102F34106FBB98A60CA05EB576A /* UIImage+averageColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+averageColor.swift"; path = "FlyingEmojis/Extensions/UIImage+averageColor.swift"; sourceTree = "<group>"; };
+		8511E2D592897C8214A8140410D912DB /* FlyingEmojis-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlyingEmojis-prefix.pch"; sourceTree = "<group>"; };
+		8F09BB82954E4AF0B311850351094108 /* FlyingEmojis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FlyingEmojis.release.xcconfig; sourceTree = "<group>"; };
+		91D93EEF58EABAE59DC4CF36EAA6C519 /* FlyingEmojis.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlyingEmojis.h; path = FlyingEmojis/FlyingEmojis.h; sourceTree = "<group>"; };
+		9BEBB827C5386532BF374927EC019160 /* Pods-quizzz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-quizzz.debug.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A98DF363818DBB338202F3C62A890DFC /* Pods-quizzz.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-quizzz.modulemap"; sourceTree = "<group>"; };
+		B0F0C88153F00C3DCC28FCD8DC8530EA /* FlyingEmojis */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = FlyingEmojis; path = libFlyingEmojis.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5573A3557C7DB97D19A424F2E72EF6E /* Pods-quizzz-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-quizzz-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B8F070F57621F5B86CC4E1305B1571FF /* String+toImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+toImage.swift"; path = "FlyingEmojis/Extensions/String+toImage.swift"; sourceTree = "<group>"; };
+		C8FF00661254DC2B895E0BB826CEECCA /* FlyingEmojis.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FlyingEmojis.modulemap; sourceTree = "<group>"; };
+		CC41653468C142275D833B8D7DF004E6 /* ParticleAnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParticleAnimationView.swift; path = FlyingEmojis/ParticleAnimationView/ParticleAnimationView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE20F8B4F15FF93FC80436CDEFE919F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4ECC26EC2EC1A25B1B22AE24408A538 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07ABECF0963C1395183638CD07BAAB3B /* FlyingEmojis */ = {
+			isa = PBXGroup;
+			children = (
+				91D93EEF58EABAE59DC4CF36EAA6C519 /* FlyingEmojis.h */,
+				CC41653468C142275D833B8D7DF004E6 /* ParticleAnimationView.swift */,
+				B8F070F57621F5B86CC4E1305B1571FF /* String+toImage.swift */,
+				51BB6102F34106FBB98A60CA05EB576A /* UIImage+averageColor.swift */,
+				B69FCD73944CB14542B1B44EFA919D9D /* Support Files */,
+			);
+			name = FlyingEmojis;
+			path = FlyingEmojis;
+			sourceTree = "<group>";
+		};
+		19AD03993938F44C23C63338E92F41F8 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D054FE4D3BB65F8DEE38C0C9329741A9 /* Pods-quizzz */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		25D91655D65B09C8BE98766E9CB08A43 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07ABECF0963C1395183638CD07BAAB3B /* FlyingEmojis */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3747D676565F3C2953DA725F16F2CCD9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B0F0C88153F00C3DCC28FCD8DC8530EA /* FlyingEmojis */,
+				356B0589F741C1B2AF769C40FECCAAC5 /* Pods-quizzz */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B69FCD73944CB14542B1B44EFA919D9D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C8FF00661254DC2B895E0BB826CEECCA /* FlyingEmojis.modulemap */,
+				0F81AB94A369EB0539AA55374E88FBA9 /* FlyingEmojis-dummy.m */,
+				8511E2D592897C8214A8140410D912DB /* FlyingEmojis-prefix.pch */,
+				0BA766335C567DD5416347EB9413AA25 /* FlyingEmojis-umbrella.h */,
+				1A2F71BE829829B30B33D6FA17787F48 /* FlyingEmojis.debug.xcconfig */,
+				8F09BB82954E4AF0B311850351094108 /* FlyingEmojis.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FlyingEmojis";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				25D91655D65B09C8BE98766E9CB08A43 /* Pods */,
+				3747D676565F3C2953DA725F16F2CCD9 /* Products */,
+				19AD03993938F44C23C63338E92F41F8 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D054FE4D3BB65F8DEE38C0C9329741A9 /* Pods-quizzz */ = {
+			isa = PBXGroup;
+			children = (
+				A98DF363818DBB338202F3C62A890DFC /* Pods-quizzz.modulemap */,
+				B5573A3557C7DB97D19A424F2E72EF6E /* Pods-quizzz-acknowledgements.markdown */,
+				4BF4E6C999EFA2D33537B1FF1332884D /* Pods-quizzz-acknowledgements.plist */,
+				0E19714695BE9EA5984957A2B2F51CCE /* Pods-quizzz-dummy.m */,
+				498C7CF4C857AB620341CE86444F4DBB /* Pods-quizzz-umbrella.h */,
+				9BEBB827C5386532BF374927EC019160 /* Pods-quizzz.debug.xcconfig */,
+				2D1EAB53B3F25AC9117E14970F391956 /* Pods-quizzz.release.xcconfig */,
+			);
+			name = "Pods-quizzz";
+			path = "Target Support Files/Pods-quizzz";
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8138C2FADF59E6850D4832A5D4606F60 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D424333F4E5912C46440E3FCD204A67 /* Pods-quizzz-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF1A408E93BD4EB2B1A21ED2406A0CBD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6A61C5D644CA9554FC49B52748A585F /* FlyingEmojis.h in Headers */,
+				57A4DF723BE9EBD3A18442105FB74B9C /* FlyingEmojis-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1D3B1ABF893298784BF693B799B18327 /* FlyingEmojis */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FA0CB7EC455D829F69ABDF2FFAB4DB5 /* Build configuration list for PBXNativeTarget "FlyingEmojis" */;
+			buildPhases = (
+				FF1A408E93BD4EB2B1A21ED2406A0CBD /* Headers */,
+				52622960F7146DF221DD89858B68C5A2 /* Sources */,
+				AE20F8B4F15FF93FC80436CDEFE919F4 /* Frameworks */,
+				4ADB7EC024452BD95B247091428F6719 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlyingEmojis;
+			productName = FlyingEmojis;
+			productReference = B0F0C88153F00C3DCC28FCD8DC8530EA /* FlyingEmojis */;
+			productType = "com.apple.product-type.library.static";
+		};
+		63CB0319A0303E1F78F6E3EC10BF5AA5 /* Pods-quizzz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 504C710A05E42561663750E23FB82051 /* Build configuration list for PBXNativeTarget "Pods-quizzz" */;
+			buildPhases = (
+				8138C2FADF59E6850D4832A5D4606F60 /* Headers */,
+				E4121F96341664AD26A413061ADF31CA /* Sources */,
+				F4ECC26EC2EC1A25B1B22AE24408A538 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59417EBAFD048ADCA6E682F3E3F99219 /* PBXTargetDependency */,
+			);
+			name = "Pods-quizzz";
+			productName = "Pods-quizzz";
+			productReference = 356B0589F741C1B2AF769C40FECCAAC5 /* Pods-quizzz */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 3747D676565F3C2953DA725F16F2CCD9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D3B1ABF893298784BF693B799B18327 /* FlyingEmojis */,
+				63CB0319A0303E1F78F6E3EC10BF5AA5 /* Pods-quizzz */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4ADB7EC024452BD95B247091428F6719 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/FlyingEmojis/FlyingEmojis.modulemap",
+				"${PODS_ROOT}/Headers/Public/FlyingEmojis/FlyingEmojis-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/FlyingEmojis-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/FlyingEmojis/FlyingEmojis.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/FlyingEmojis/FlyingEmojis-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52622960F7146DF221DD89858B68C5A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AEF0DBE6A2292C6B0DB541FA684E7AB /* FlyingEmojis-dummy.m in Sources */,
+				82DE6A3505D8C43CE11F089998B25006 /* ParticleAnimationView.swift in Sources */,
+				85A430CA7BF1CDF485F92E115769C5FA /* String+toImage.swift in Sources */,
+				7EB8084080FB51ED5BAAF573E79B16CF /* UIImage+averageColor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4121F96341664AD26A413061ADF31CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D691D5EFB733D37C6A5658C502FCBC62 /* Pods-quizzz-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		59417EBAFD048ADCA6E682F3E3F99219 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FlyingEmojis;
+			target = 1D3B1ABF893298784BF693B799B18327 /* FlyingEmojis */;
+			targetProxy = 9846802BEA3C07CEAD6FDB15A7125FB1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7F8B0E64BD3E046013B855EA2CFACD56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D1EAB53B3F25AC9117E14970F391956 /* Pods-quizzz.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-quizzz/Pods-quizzz.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9553C89E183877A5CB2F3C6801BEC129 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		97806CD5285B0CF589A401CC1CA420AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BEBB827C5386532BF374927EC019160 /* Pods-quizzz.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-quizzz/Pods-quizzz.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B4BEFAD71D9A56A00EC9DF8C5748ADE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F09BB82954E4AF0B311850351094108 /* FlyingEmojis.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/FlyingEmojis/FlyingEmojis-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MODULEMAP_FILE = Headers/Public/FlyingEmojis/FlyingEmojis.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = FlyingEmojis;
+				PRODUCT_NAME = FlyingEmojis;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE7873F3A19D747D9A84352B224409E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A2F71BE829829B30B33D6FA17787F48 /* FlyingEmojis.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/FlyingEmojis/FlyingEmojis-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MODULEMAP_FILE = Headers/Public/FlyingEmojis/FlyingEmojis.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = FlyingEmojis;
+				PRODUCT_NAME = FlyingEmojis;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */,
+				9553C89E183877A5CB2F3C6801BEC129 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		504C710A05E42561663750E23FB82051 /* Build configuration list for PBXNativeTarget "Pods-quizzz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97806CD5285B0CF589A401CC1CA420AB /* Debug */,
+				7F8B0E64BD3E046013B855EA2CFACD56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FA0CB7EC455D829F69ABDF2FFAB4DB5 /* Build configuration list for PBXNativeTarget "FlyingEmojis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE7873F3A19D747D9A84352B224409E2 /* Debug */,
+				B4BEFAD71D9A56A00EC9DF8C5748ADE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

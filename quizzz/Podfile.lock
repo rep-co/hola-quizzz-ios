@@ -1,0 +1,21 @@
+PODS:
+  - FlyingEmojis (0.0.1)
+
+DEPENDENCIES:
+  - FlyingEmojis (from `https://github.com/LolleyBall/FlyingEmojis.git`)
+
+EXTERNAL SOURCES:
+  FlyingEmojis:
+    :git: https://github.com/LolleyBall/FlyingEmojis.git
+
+CHECKOUT OPTIONS:
+  FlyingEmojis:
+    :commit: b09ce0cddbf4b35226315222373c604f2da4c7a8
+    :git: https://github.com/LolleyBall/FlyingEmojis.git
+
+SPEC CHECKSUMS:
+  FlyingEmojis: 26d54adf5c7ee6d92c23003081edded5bc9c7288
+
+PODFILE CHECKSUM: 747b9ac49886f9c078abd1fda4a854d197378343
+
+COCOAPODS: 1.13.0
