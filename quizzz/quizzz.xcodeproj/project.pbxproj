@@ -10,9 +10,15 @@
 		A676A2A92B2D9A52002DA5F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676A2A82B2D9A52002DA5F4 /* AppDelegate.swift */; };
 		A676A2AB2B2D9A52002DA5F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676A2AA2B2D9A52002DA5F4 /* SceneDelegate.swift */; };
 		A676A2AD2B2D9A52002DA5F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676A2AC2B2D9A52002DA5F4 /* ViewController.swift */; };
-		A676A2B02B2D9A52002DA5F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A676A2AE2B2D9A52002DA5F4 /* Main.storyboard */; };
 		A676A2B22B2D9A54002DA5F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A676A2B12B2D9A54002DA5F4 /* Assets.xcassets */; };
 		A676A2B52B2D9A54002DA5F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A676A2B32B2D9A54002DA5F4 /* LaunchScreen.storyboard */; };
+		A676A2C02B2DC899002DA5F4 /* QuestionStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676A2BF2B2DC899002DA5F4 /* QuestionStatusView.swift */; };
+		A676A2C32B2DC8C4002DA5F4 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676A2C22B2DC8C4002DA5F4 /* QuestionViewController.swift */; };
+		A676A2C52B2DCDA6002DA5F4 /* QuestionStatusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676A2C42B2DCDA6002DA5F4 /* QuestionStatusCollectionViewCell.swift */; };
+		A676A2C72B2DCE5E002DA5F4 /* QuestionStatusCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676A2C62B2DCE5E002DA5F4 /* QuestionStatusCellType.swift */; };
+		A676A2CA2B2DD1A8002DA5F4 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676A2C92B2DD1A8002DA5F4 /* UIColor+.swift */; };
+		A676A2CC2B2DEAE2002DA5F4 /* Collection+safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676A2CB2B2DEAE2002DA5F4 /* Collection+safe.swift */; };
+		A676A2CE2B2DF340002DA5F4 /* TopAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676A2CD2B2DF340002DA5F4 /* TopAlignedCollectionViewFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +26,16 @@
 		A676A2A82B2D9A52002DA5F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A676A2AA2B2D9A52002DA5F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A676A2AC2B2D9A52002DA5F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A676A2AF2B2D9A52002DA5F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A676A2B12B2D9A54002DA5F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A676A2B42B2D9A54002DA5F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A676A2B62B2D9A54002DA5F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A676A2BF2B2DC899002DA5F4 /* QuestionStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStatusView.swift; sourceTree = "<group>"; };
+		A676A2C22B2DC8C4002DA5F4 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		A676A2C42B2DCDA6002DA5F4 /* QuestionStatusCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStatusCollectionViewCell.swift; sourceTree = "<group>"; };
+		A676A2C62B2DCE5E002DA5F4 /* QuestionStatusCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStatusCellType.swift; sourceTree = "<group>"; };
+		A676A2C92B2DD1A8002DA5F4 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		A676A2CB2B2DEAE2002DA5F4 /* Collection+safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+safe.swift"; sourceTree = "<group>"; };
+		A676A2CD2B2DF340002DA5F4 /* TopAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,61 @@
 		A676A2A72B2D9A52002DA5F4 /* quizzz */ = {
 			isa = PBXGroup;
 			children = (
+				A676A2C82B2DD198002DA5F4 /* Extensions */,
+				A676A2BD2B2DC845002DA5F4 /* Screens */,
 				A676A2A82B2D9A52002DA5F4 /* AppDelegate.swift */,
 				A676A2AA2B2D9A52002DA5F4 /* SceneDelegate.swift */,
 				A676A2AC2B2D9A52002DA5F4 /* ViewController.swift */,
-				A676A2AE2B2D9A52002DA5F4 /* Main.storyboard */,
 				A676A2B12B2D9A54002DA5F4 /* Assets.xcassets */,
 				A676A2B32B2D9A54002DA5F4 /* LaunchScreen.storyboard */,
 				A676A2B62B2D9A54002DA5F4 /* Info.plist */,
 			);
 			path = quizzz;
+			sourceTree = "<group>";
+		};
+		A676A2BC2B2DC82A002DA5F4 /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				A676A2BE2B2DC855002DA5F4 /* Views */,
+				A676A2C22B2DC8C4002DA5F4 /* QuestionViewController.swift */,
+			);
+			path = Questions;
+			sourceTree = "<group>";
+		};
+		A676A2BD2B2DC845002DA5F4 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A676A2BC2B2DC82A002DA5F4 /* Questions */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		A676A2BE2B2DC855002DA5F4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A676A2C12B2DC89D002DA5F4 /* QuestionStatusView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A676A2C12B2DC89D002DA5F4 /* QuestionStatusView */ = {
+			isa = PBXGroup;
+			children = (
+				A676A2BF2B2DC899002DA5F4 /* QuestionStatusView.swift */,
+				A676A2C42B2DCDA6002DA5F4 /* QuestionStatusCollectionViewCell.swift */,
+				A676A2C62B2DCE5E002DA5F4 /* QuestionStatusCellType.swift */,
+				A676A2CD2B2DF340002DA5F4 /* TopAlignedCollectionViewFlowLayout.swift */,
+			);
+			path = QuestionStatusView;
+			sourceTree = "<group>";
+		};
+		A676A2C82B2DD198002DA5F4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A676A2C92B2DD1A8002DA5F4 /* UIColor+.swift */,
+				A676A2CB2B2DEAE2002DA5F4 /* Collection+safe.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +185,6 @@
 			files = (
 				A676A2B52B2D9A54002DA5F4 /* LaunchScreen.storyboard in Resources */,
 				A676A2B22B2D9A54002DA5F4 /* Assets.xcassets in Resources */,
-				A676A2B02B2D9A52002DA5F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +195,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A676A2C52B2DCDA6002DA5F4 /* QuestionStatusCollectionViewCell.swift in Sources */,
+				A676A2CE2B2DF340002DA5F4 /* TopAlignedCollectionViewFlowLayout.swift in Sources */,
+				A676A2CA2B2DD1A8002DA5F4 /* UIColor+.swift in Sources */,
 				A676A2AD2B2D9A52002DA5F4 /* ViewController.swift in Sources */,
+				A676A2C72B2DCE5E002DA5F4 /* QuestionStatusCellType.swift in Sources */,
+				A676A2C32B2DC8C4002DA5F4 /* QuestionViewController.swift in Sources */,
 				A676A2A92B2D9A52002DA5F4 /* AppDelegate.swift in Sources */,
+				A676A2C02B2DC899002DA5F4 /* QuestionStatusView.swift in Sources */,
+				A676A2CC2B2DEAE2002DA5F4 /* Collection+safe.swift in Sources */,
 				A676A2AB2B2D9A52002DA5F4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +211,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A676A2AE2B2D9A52002DA5F4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A676A2AF2B2D9A52002DA5F4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A676A2B32B2D9A54002DA5F4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,7 +353,6 @@
 				INFOPLIST_FILE = quizzz/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -326,7 +381,6 @@
 				INFOPLIST_FILE = quizzz/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
