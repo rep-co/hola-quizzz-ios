@@ -8,7 +8,6 @@
 import UIKit
 
 final class QuestionStatusView: UIView {
-    
     private var answerTypes: [QuestionStatusCellType] = []
     private let emptyTypes: [QuestionStatusCellType] = .init(repeating: .empty, count: 7)
     
