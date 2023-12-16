@@ -10,7 +10,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   FlyingEmojis:
-    :commit: 94e462153dcbf21e1ae1ecf3c542aec8748d5155
+    :commit: b09ce0cddbf4b35226315222373c604f2da4c7a8
     :git: https://github.com/LolleyBall/FlyingEmojis.git
 
 SPEC CHECKSUMS:

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FlyingEmojis
 
 final class MainScreenViewController: UIViewController {
     
@@ -14,6 +15,7 @@ final class MainScreenViewController: UIViewController {
     
     private let label = UILabel()
     private let imageView = UIImageView()
+    private let emojisBackground = ParticleAnimationView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +24,12 @@ final class MainScreenViewController: UIViewController {
         setupConstraints()
         setupLable()
         setupImageView()
+        setupEmojisBackground()
+    }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        emojisBackground.updateBounds()
     }
 
     func setupLable(){
@@ -39,12 +46,19 @@ final class MainScreenViewController: UIViewController {
     func addSubvievs(){
         label.translatesAutoresizingMaskIntoConstraints = false
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        emojisBackground.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(emojisBackground)
         view.addSubview(imageView)
         view.addSubview(label)
     }
 
     func setupConstraints() {
         NSLayoutConstraint.activate([
+            emojisBackground.topAnchor.constraint(equalTo: view.topAnchor),
+            emojisBackground.leftAnchor.constraint(equalTo: view.leftAnchor),
+            emojisBackground.rightAnchor.constraint(equalTo: view.rightAnchor),
+            emojisBackground.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+
             imageView.topAnchor.constraint(equalTo: view.topAnchor,constant: 100),
             imageView.leftAnchor.constraint(equalTo: view.leftAnchor,constant: 90),
             imageView.rightAnchor.constraint(equalTo: view.rightAnchor,constant: -90),
@@ -56,6 +70,15 @@ final class MainScreenViewController: UIViewController {
             label.bottomAnchor.constraint(equalTo: imageView.bottomAnchor,constant: 90)
             
         ])
+    }
+}
+
+// MARK: - Private Methods -
+private extension MainScreenViewController {
+    func setupEmojisBackground() {
+        emojisBackground.update(with: .init(mainImage: "🤡".toImage(),
+                                            secondaryImage: "🎪".toImage(),
+                                            tertiaryImage: "🎠".toImage()))
     }
 }
 
