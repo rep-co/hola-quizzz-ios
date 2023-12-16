@@ -13,6 +13,12 @@
 		A676A2AD2B2D9A52002DA5F4 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676A2AC2B2D9A52002DA5F4 /* MainScreenViewController.swift */; };
 		A676A2B22B2D9A54002DA5F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A676A2B12B2D9A54002DA5F4 /* Assets.xcassets */; };
 		A676A2B52B2D9A54002DA5F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A676A2B32B2D9A54002DA5F4 /* LaunchScreen.storyboard */; };
+		A67A695C2B2E08C0002B59DF /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A69552B2E08C0002B59DF /* QuestionViewController.swift */; };
+		A67A695D2B2E08C0002B59DF /* QuestionStatusCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A69582B2E08C0002B59DF /* QuestionStatusCellType.swift */; };
+		A67A695E2B2E08C0002B59DF /* QuestionStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A69592B2E08C0002B59DF /* QuestionStatusView.swift */; };
+		A67A695F2B2E08C0002B59DF /* QuestionStatusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A695A2B2E08C0002B59DF /* QuestionStatusCollectionViewCell.swift */; };
+		A67A69602B2E08C0002B59DF /* TopAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A695B2B2E08C0002B59DF /* TopAlignedCollectionViewFlowLayout.swift */; };
+		A67A69642B2E08C8002B59DF /* Collection+safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A69622B2E08C8002B59DF /* Collection+safe.swift */; };
 		A7F247622B2DCC0B00A267E5 /* MainScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F247612B2DCC0B00A267E5 /* MainScreenCell.swift */; };
 		B4B317D42B2E0421005FA6C4 /* RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B317D32B2E0421005FA6C4 /* RuleView.swift */; };
 		B4B317D62B2E0474005FA6C4 /* RuleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B317D52B2E0474005FA6C4 /* RuleCollectionViewCell.swift */; };
@@ -29,6 +35,12 @@
 		A676A2B12B2D9A54002DA5F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A676A2B42B2D9A54002DA5F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A676A2B62B2D9A54002DA5F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A67A69552B2E08C0002B59DF /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		A67A69582B2E08C0002B59DF /* QuestionStatusCellType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionStatusCellType.swift; sourceTree = "<group>"; };
+		A67A69592B2E08C0002B59DF /* QuestionStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionStatusView.swift; sourceTree = "<group>"; };
+		A67A695A2B2E08C0002B59DF /* QuestionStatusCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionStatusCollectionViewCell.swift; sourceTree = "<group>"; };
+		A67A695B2B2E08C0002B59DF /* TopAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		A67A69622B2E08C8002B59DF /* Collection+safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+safe.swift"; sourceTree = "<group>"; };
 		A7F247612B2DCC0B00A267E5 /* MainScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCell.swift; sourceTree = "<group>"; };
 		B4B317CD2B2DEEAA005FA6C4 /* FlyingEmojis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FlyingEmojis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B317D32B2E0421005FA6C4 /* RuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleView.swift; sourceTree = "<group>"; };
@@ -81,15 +93,48 @@
 		A676A2A72B2D9A52002DA5F4 /* quizzz */ = {
 			isa = PBXGroup;
 			children = (
-				B4B317D92B2E0A36005FA6C4 /* Extension */,
-				A676A2A82B2D9A52002DA5F4 /* AppDelegate.swift */,
-				A676A2AA2B2D9A52002DA5F4 /* SceneDelegate.swift */,
+				B4B317DF2B2E1A47005FA6C4 /* Helpers */,
+				A67A69612B2E08C8002B59DF /* Extensions */,
 				B4B317D12B2E03F7005FA6C4 /* Screens */,
-				A676A2B12B2D9A54002DA5F4 /* Assets.xcassets */,
-				A676A2B32B2D9A54002DA5F4 /* LaunchScreen.storyboard */,
-				A676A2B62B2D9A54002DA5F4 /* Info.plist */,
 			);
 			path = quizzz;
+			sourceTree = "<group>";
+		};
+		A67A69542B2E08C0002B59DF /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				A67A69552B2E08C0002B59DF /* QuestionViewController.swift */,
+				A67A69562B2E08C0002B59DF /* Views */,
+			);
+			path = Questions;
+			sourceTree = "<group>";
+		};
+		A67A69562B2E08C0002B59DF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A67A69572B2E08C0002B59DF /* QuestionStatusView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A67A69572B2E08C0002B59DF /* QuestionStatusView */ = {
+			isa = PBXGroup;
+			children = (
+				A67A69582B2E08C0002B59DF /* QuestionStatusCellType.swift */,
+				A67A69592B2E08C0002B59DF /* QuestionStatusView.swift */,
+				A67A695A2B2E08C0002B59DF /* QuestionStatusCollectionViewCell.swift */,
+				A67A695B2B2E08C0002B59DF /* TopAlignedCollectionViewFlowLayout.swift */,
+			);
+			path = QuestionStatusView;
+			sourceTree = "<group>";
+		};
+		A67A69612B2E08C8002B59DF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B4B317DA2B2E0A44005FA6C4 /* Vibration.swift */,
+				A67A69622B2E08C8002B59DF /* Collection+safe.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A7F247602B2DCBEE00A267E5 /* MainScreen */ = {
@@ -104,6 +149,7 @@
 		B4B317D12B2E03F7005FA6C4 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				A67A69542B2E08C0002B59DF /* Questions */,
 				B4B317D22B2E0409005FA6C4 /* Rules */,
 				A7F247602B2DCBEE00A267E5 /* MainScreen */,
 			);
@@ -120,12 +166,16 @@
 			path = Rules;
 			sourceTree = "<group>";
 		};
-		B4B317D92B2E0A36005FA6C4 /* Extension */ = {
+		B4B317DF2B2E1A47005FA6C4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				B4B317DA2B2E0A44005FA6C4 /* Vibration.swift */,
+				A676A2AA2B2D9A52002DA5F4 /* SceneDelegate.swift */,
+				A676A2A82B2D9A52002DA5F4 /* AppDelegate.swift */,
+				A676A2B12B2D9A54002DA5F4 /* Assets.xcassets */,
+				A676A2B32B2D9A54002DA5F4 /* LaunchScreen.storyboard */,
+				A676A2B62B2D9A54002DA5F4 /* Info.plist */,
 			);
-			path = Extension;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		F099A1111B1E292A49332839 /* Pods */ = {
@@ -236,11 +286,17 @@
 				B4B317DB2B2E0A44005FA6C4 /* Vibration.swift in Sources */,
 				B4B317D82B2E04D2005FA6C4 /* RulesViewController.swift in Sources */,
 				A676A2AD2B2D9A52002DA5F4 /* MainScreenViewController.swift in Sources */,
+				A67A695E2B2E08C0002B59DF /* QuestionStatusView.swift in Sources */,
+				A67A695C2B2E08C0002B59DF /* QuestionViewController.swift in Sources */,
 				A7F247622B2DCC0B00A267E5 /* MainScreenCell.swift in Sources */,
 				B4B317D62B2E0474005FA6C4 /* RuleCollectionViewCell.swift in Sources */,
+				A67A695F2B2E08C0002B59DF /* QuestionStatusCollectionViewCell.swift in Sources */,
 				A676A2A92B2D9A52002DA5F4 /* AppDelegate.swift in Sources */,
+				A67A69642B2E08C8002B59DF /* Collection+safe.swift in Sources */,
+				A67A69602B2E08C0002B59DF /* TopAlignedCollectionViewFlowLayout.swift in Sources */,
 				A676A2AB2B2D9A52002DA5F4 /* SceneDelegate.swift in Sources */,
 				B4B317D42B2E0421005FA6C4 /* RuleView.swift in Sources */,
+				A67A695D2B2E08C0002B59DF /* QuestionStatusCellType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
