@@ -25,7 +25,7 @@
 		A67A696E2B2F0719002B59DF /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A696D2B2F0719002B59DF /* QuestionViewModel.swift */; };
 		A67A69702B2F0FCD002B59DF /* QuestionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A696F2B2F0FCD002B59DF /* QuestionRouter.swift */; };
 		A71381712B2F1793003613B7 /* PackPreviewDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71381702B2F1793003613B7 /* PackPreviewDTO.swift */; };
-		A71381772B2F31F8003613B7 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71381762B2F31F8003613B7 /* Services.swift */; };
+		A71381772B2F31F8003613B7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71381762B2F31F8003613B7 /* NetworkService.swift */; };
 		A71381792B2F5006003613B7 /* QuizQuestionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71381782B2F5006003613B7 /* QuizQuestionDTO.swift */; };
 		A713817C2B2F52E0003613B7 /* PackDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713817B2B2F52E0003613B7 /* PackDTO.swift */; };
 		A713817E2B2F545A003613B7 /* Targets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713817D2B2F545A003613B7 /* Targets.swift */; };
@@ -63,7 +63,7 @@
 		A67A696D2B2F0719002B59DF /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
 		A67A696F2B2F0FCD002B59DF /* QuestionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionRouter.swift; sourceTree = "<group>"; };
 		A71381702B2F1793003613B7 /* PackPreviewDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackPreviewDTO.swift; sourceTree = "<group>"; };
-		A71381762B2F31F8003613B7 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		A71381762B2F31F8003613B7 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		A71381782B2F5006003613B7 /* QuizQuestionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestionDTO.swift; sourceTree = "<group>"; };
 		A713817B2B2F52E0003613B7 /* PackDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackDTO.swift; sourceTree = "<group>"; };
 		A713817D2B2F545A003613B7 /* Targets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Targets.swift; sourceTree = "<group>"; };
@@ -198,7 +198,7 @@
 		A71381732B2F1B9E003613B7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				A71381762B2F31F8003613B7 /* Services.swift */,
+				A71381762B2F31F8003613B7 /* NetworkService.swift */,
 				A713817D2B2F545A003613B7 /* Targets.swift */,
 			);
 			path = Services;
@@ -385,7 +385,7 @@
 				A67A695C2B2E08C0002B59DF /* QuestionViewController.swift in Sources */,
 				A713817E2B2F545A003613B7 /* Targets.swift in Sources */,
 				B4E092F12B2F5EBF00051792 /* UIImage+assets.swift in Sources */,
-				A71381772B2F31F8003613B7 /* Services.swift in Sources */,
+				A71381772B2F31F8003613B7 /* NetworkService.swift in Sources */,
 				A7F247622B2DCC0B00A267E5 /* MainScreenCell.swift in Sources */,
 				B4B317D62B2E0474005FA6C4 /* RuleCollectionViewCell.swift in Sources */,
 				A67A695F2B2E08C0002B59DF /* QuestionStatusCollectionViewCell.swift in Sources */,
