@@ -9,13 +9,7 @@ import UIKit
 import FlyingEmojis
 
 final class MainScreenViewController: UIViewController,  UICollectionViewDataSource, UICollectionViewDelegate {
-    let data = [
-        MainScreenCell.Info(title: "sdfg", description: "gfd" ),
-        MainScreenCell.Info(title: "String", description: "fd" ),
-        MainScreenCell.Info(title: "String", description: "fdfd" ),
-        MainScreenCell.Info(title: "hgfd", description: "fds" ),
-        MainScreenCell.Info(title: "dfg", description: "gfd" ),
-    ]
+    private var packPreviews: [PackPreview]?
     private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -25,9 +19,16 @@ final class MainScreenViewController: UIViewController,  UICollectionViewDataSou
     private let logoImageView = UIImageView()
     private let emojisBackground = ParticleAnimationView()
     private let layout = UICollectionViewFlowLayout()
+    private let networkService: NetworkService = .shared
+    var router: MainRouter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        Task {
+            let packPreviewsDTO = try await networkService.getPackPreviews()
+            packPreviews = packPreviewsDTO.map { PackPreview(dto: $0) }
+            collectionView.reloadData()
+        }
         view.backgroundColor = .white
         addSubvievs()
         setupConstraints()
@@ -49,11 +50,11 @@ final class MainScreenViewController: UIViewController,  UICollectionViewDataSou
         titleLabel.textAlignment = .center
         titleLabel.font = .systemFont(ofSize: 30)
     }
-    
+
     func setupImageView(){
-        logoImageView.image = .logo
+        logoImageView.image = .logoQuiz
     }
-    
+
     func addSubvievs(){
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -76,12 +77,12 @@ final class MainScreenViewController: UIViewController,  UICollectionViewDataSou
             logoImageView.leftAnchor.constraint(equalTo: view.leftAnchor,constant: 90),
             logoImageView.rightAnchor.constraint(equalTo: view.rightAnchor,constant: -90),
             logoImageView.heightAnchor.constraint(equalToConstant:140),
-            
+
             titleLabel.heightAnchor.constraint(equalToConstant:45),
             titleLabel.leftAnchor.constraint(equalTo: view.leftAnchor,constant: 10),
             titleLabel.rightAnchor.constraint(equalTo: view.rightAnchor,constant: -10),
             titleLabel.bottomAnchor.constraint(equalTo: logoImageView.bottomAnchor,constant: 90),
-            
+
             collectionView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor,constant: 10),
             collectionView.leftAnchor.constraint(equalTo: view.leftAnchor,constant: 30),
             collectionView.rightAnchor.constraint(equalTo: view.rightAnchor,constant: -30),
@@ -117,14 +118,21 @@ private extension MainScreenViewController {
 
 extension MainScreenViewController{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return packPreviews?.count ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainScreenCell.identifier, for: indexPath) as? MainScreenCell
-        else { return UICollectionViewCell() }
-        cell.data = self.data[indexPath.row]
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainScreenCell.identifier,
+                                                            for: indexPath) as? MainScreenCell,
+              let packPreviews,
+              let packPreview = packPreviews[safe: indexPath.row] else { return UICollectionViewCell() }
+        cell.data = .init(title: packPreview.name, description: packPreview.description)
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let id = packPreviews?[indexPath.row].id else { return }
+        router.openQuizViewController(with: id)
     }
 }
 

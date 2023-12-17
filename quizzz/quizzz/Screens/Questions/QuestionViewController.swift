@@ -111,7 +111,7 @@ extension QuestionViewController {
     private func makeBackButton() -> UIButton {
         let button = UIButton()
         button.backgroundColor = .white
-        button.setImage(.backArrow, for: .normal)
+        button.setImage(.backArrowQuiz, for: .normal)
         button.layer.cornerRadius = 45.0 / 2.0
         button.layer.cornerCurve = .circular
         button.addTarget(self, action: #selector(didTapBackButton), for: .touchUpInside)

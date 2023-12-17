@@ -52,10 +52,10 @@ final class QuestionStatusCollectionViewCell: UICollectionViewCell {
     private func setupForType(_ type: QuestionStatusCellType) {
         switch type {
         case .success:
-            backgroundColor = .repcoGreen
+            backgroundColor = .quizGreen
             numberLabel.isHidden = true
         case .error:
-            backgroundColor = .repcoRed
+            backgroundColor = .quizRed
             numberLabel.isHidden = true
         case .selected:
             backgroundColor = .white
