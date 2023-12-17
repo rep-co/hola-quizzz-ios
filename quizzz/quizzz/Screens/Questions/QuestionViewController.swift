@@ -13,27 +13,35 @@ final class QuestionViewController: UIViewController {
     private lazy var questionView: QuestionView = .init()
     private lazy var answerView: AnswerView = .init()
     private lazy var emojisBackground: ParticleAnimationView = .init()
+    private lazy var emojisLoader: ParticleAnimationView = .init()
     private lazy var backButton: UIButton = makeBackButton()
     private lazy var logoImageView: UIImageView = makeLogoImageView()
+    private let placeholderView = UIView()
+    private var isLoaded = false
     
     var viewModel: QuestionViewModelProtocol!
     var router: QuestionRouterProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.isNavigationBarHidden = true
-        addSubviews()
-        setupConstraints()
         setup()
+        setupUI()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         emojisBackground.updateBounds()
+        emojisLoader.updateBounds()
     }
-    
+
+    override func viewDidAppear(_ animated: Bool) {
+        if !isLoaded {
+            emojisBackground.update(with: "".toImage())
+        }
+    }
+
     override func viewWillDisappear(_ animated: Bool) {
-        emojisBackground.isHidden = true
+        emojisBackground.update(with: "".toImage())
     }
     
     private func setup() {
@@ -44,6 +52,12 @@ final class QuestionViewController: UIViewController {
             self?.statusView.nextStep(with: flag)
             self?.viewModel.nextQuestion()
         }
+    }
+    
+    private func setupUI() {
+        navigationController?.isNavigationBarHidden = true
+        addSubviews()
+        setupConstraints()
         addBackgroundBlur()
     }
 
@@ -54,6 +68,9 @@ final class QuestionViewController: UIViewController {
         view.addSubview(statusView)
         view.addSubview(questionView)
         view.addSubview(answerView)
+        view.bringSubviewToFront(emojisBackground)
+        view.bringSubviewToFront(backButton)
+        view.bringSubviewToFront(logoImageView)
     }
     
     private func setupConstraints() {
@@ -99,7 +116,7 @@ final class QuestionViewController: UIViewController {
     }
     
     private func addBackgroundBlur() {
-        let blurEffect = UIBlurEffect(style: .systemChromeMaterial)
+        let blurEffect = UIBlurEffect(style: .systemChromeMaterialDark)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = view.bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -114,10 +131,13 @@ final class QuestionViewController: UIViewController {
 
 extension QuestionViewController: QuestionViewModelDelegate {
     func viewModelDidUpdate(viewModel: QuestionViewModelProtocol) {
+        isLoaded = true
         guard let theme = viewModel.getTheme() else { return }
         DispatchQueue.main.async { [weak self] in
-            self?.emojisBackground.update(with: theme)
+            guard let self else { return }
+            self.emojisBackground.update(with: theme)
             viewModel.setup()
+            self.view.sendSubviewToBack(self.emojisBackground)
         }
     }
 
