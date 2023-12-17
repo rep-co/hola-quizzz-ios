@@ -19,6 +19,11 @@
 		A67A695F2B2E08C0002B59DF /* QuestionStatusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A695A2B2E08C0002B59DF /* QuestionStatusCollectionViewCell.swift */; };
 		A67A69602B2E08C0002B59DF /* TopAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A695B2B2E08C0002B59DF /* TopAlignedCollectionViewFlowLayout.swift */; };
 		A67A69642B2E08C8002B59DF /* Collection+safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A69622B2E08C8002B59DF /* Collection+safe.swift */; };
+		A71381712B2F1793003613B7 /* PackPreviewDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71381702B2F1793003613B7 /* PackPreviewDTO.swift */; };
+		A71381772B2F31F8003613B7 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71381762B2F31F8003613B7 /* Services.swift */; };
+		A71381792B2F5006003613B7 /* QuizQuestionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71381782B2F5006003613B7 /* QuizQuestionDTO.swift */; };
+		A713817C2B2F52E0003613B7 /* PackDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713817B2B2F52E0003613B7 /* PackDTO.swift */; };
+		A713817E2B2F545A003613B7 /* Targets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713817D2B2F545A003613B7 /* Targets.swift */; };
 		A7F247622B2DCC0B00A267E5 /* MainScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F247612B2DCC0B00A267E5 /* MainScreenCell.swift */; };
 		B4B317D42B2E0421005FA6C4 /* RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B317D32B2E0421005FA6C4 /* RuleView.swift */; };
 		B4B317D62B2E0474005FA6C4 /* RuleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B317D52B2E0474005FA6C4 /* RuleCollectionViewCell.swift */; };
@@ -41,6 +46,11 @@
 		A67A695A2B2E08C0002B59DF /* QuestionStatusCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionStatusCollectionViewCell.swift; sourceTree = "<group>"; };
 		A67A695B2B2E08C0002B59DF /* TopAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		A67A69622B2E08C8002B59DF /* Collection+safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+safe.swift"; sourceTree = "<group>"; };
+		A71381702B2F1793003613B7 /* PackPreviewDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackPreviewDTO.swift; sourceTree = "<group>"; };
+		A71381762B2F31F8003613B7 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		A71381782B2F5006003613B7 /* QuizQuestionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestionDTO.swift; sourceTree = "<group>"; };
+		A713817B2B2F52E0003613B7 /* PackDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackDTO.swift; sourceTree = "<group>"; };
+		A713817D2B2F545A003613B7 /* Targets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Targets.swift; sourceTree = "<group>"; };
 		A7F247612B2DCC0B00A267E5 /* MainScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCell.swift; sourceTree = "<group>"; };
 		B4B317CD2B2DEEAA005FA6C4 /* FlyingEmojis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FlyingEmojis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B317D32B2E0421005FA6C4 /* RuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleView.swift; sourceTree = "<group>"; };
@@ -93,6 +103,7 @@
 		A676A2A72B2D9A52002DA5F4 /* quizzz */ = {
 			isa = PBXGroup;
 			children = (
+				A713816D2B2F0EC0003613B7 /* API */,
 				B4B317DF2B2E1A47005FA6C4 /* Helpers */,
 				A67A69612B2E08C8002B59DF /* Extensions */,
 				B4B317D12B2E03F7005FA6C4 /* Screens */,
@@ -135,6 +146,34 @@
 				A67A69622B2E08C8002B59DF /* Collection+safe.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A713816D2B2F0EC0003613B7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A713817A2B2F5048003613B7 /* Models */,
+				A71381732B2F1B9E003613B7 /* Services */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		A71381732B2F1B9E003613B7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A71381762B2F31F8003613B7 /* Services.swift */,
+				A713817D2B2F545A003613B7 /* Targets.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A713817A2B2F5048003613B7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A71381702B2F1793003613B7 /* PackPreviewDTO.swift */,
+				A713817B2B2F52E0003613B7 /* PackDTO.swift */,
+				A71381782B2F5006003613B7 /* QuizQuestionDTO.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A7F247602B2DCBEE00A267E5 /* MainScreen */ = {
@@ -285,15 +324,20 @@
 			files = (
 				B4B317DB2B2E0A44005FA6C4 /* Vibration.swift in Sources */,
 				B4B317D82B2E04D2005FA6C4 /* RulesViewController.swift in Sources */,
+				A713817C2B2F52E0003613B7 /* PackDTO.swift in Sources */,
 				A676A2AD2B2D9A52002DA5F4 /* MainScreenViewController.swift in Sources */,
 				A67A695E2B2E08C0002B59DF /* QuestionStatusView.swift in Sources */,
+				A71381792B2F5006003613B7 /* QuizQuestionDTO.swift in Sources */,
 				A67A695C2B2E08C0002B59DF /* QuestionViewController.swift in Sources */,
+				A713817E2B2F545A003613B7 /* Targets.swift in Sources */,
+				A71381772B2F31F8003613B7 /* Services.swift in Sources */,
 				A7F247622B2DCC0B00A267E5 /* MainScreenCell.swift in Sources */,
 				B4B317D62B2E0474005FA6C4 /* RuleCollectionViewCell.swift in Sources */,
 				A67A695F2B2E08C0002B59DF /* QuestionStatusCollectionViewCell.swift in Sources */,
 				A676A2A92B2D9A52002DA5F4 /* AppDelegate.swift in Sources */,
 				A67A69642B2E08C8002B59DF /* Collection+safe.swift in Sources */,
 				A67A69602B2E08C0002B59DF /* TopAlignedCollectionViewFlowLayout.swift in Sources */,
+				A71381712B2F1793003613B7 /* PackPreviewDTO.swift in Sources */,
 				A676A2AB2B2D9A52002DA5F4 /* SceneDelegate.swift in Sources */,
 				B4B317D42B2E0421005FA6C4 /* RuleView.swift in Sources */,
 				A67A695D2B2E08C0002B59DF /* QuestionStatusCellType.swift in Sources */,

@@ -9,13 +9,7 @@ import UIKit
 import FlyingEmojis
 
 final class MainScreenViewController: UIViewController,  UICollectionViewDataSource, UICollectionViewDelegate {
-    let data = [
-        MainScreenCell.Info(title: "sdfg", description: "gfd" ),
-        MainScreenCell.Info(title: "String", description: "fd" ),
-        MainScreenCell.Info(title: "String", description: "fdfd" ),
-        MainScreenCell.Info(title: "hgfd", description: "fds" ),
-        MainScreenCell.Info(title: "dfg", description: "gfd" ),
-    ]
+    var data: [MainScreenCell.Info] = []
     private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -36,6 +30,12 @@ final class MainScreenViewController: UIViewController,  UICollectionViewDataSou
         setupImageView()
         setupEmojisBackground()
         setupCollectionView()
+
+        connectionDidFinishLoading { questions in
+            for i in questions {
+                self.data.append(.init(title: i.name, description: i.description))
+            }
+        }
     }
 
     override func viewDidLayoutSubviews() {
@@ -49,11 +49,11 @@ final class MainScreenViewController: UIViewController,  UICollectionViewDataSou
         titleLabel.textAlignment = .center
         titleLabel.font = .systemFont(ofSize: 30)
     }
-    
+
     func setupImageView(){
         logoImageView.image = .logo
     }
-    
+
     func addSubvievs(){
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -76,12 +76,12 @@ final class MainScreenViewController: UIViewController,  UICollectionViewDataSou
             logoImageView.leftAnchor.constraint(equalTo: view.leftAnchor,constant: 90),
             logoImageView.rightAnchor.constraint(equalTo: view.rightAnchor,constant: -90),
             logoImageView.heightAnchor.constraint(equalToConstant:140),
-            
+
             titleLabel.heightAnchor.constraint(equalToConstant:45),
             titleLabel.leftAnchor.constraint(equalTo: view.leftAnchor,constant: 10),
             titleLabel.rightAnchor.constraint(equalTo: view.rightAnchor,constant: -10),
             titleLabel.bottomAnchor.constraint(equalTo: logoImageView.bottomAnchor,constant: 90),
-            
+
             collectionView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor,constant: 10),
             collectionView.leftAnchor.constraint(equalTo: view.leftAnchor,constant: 30),
             collectionView.rightAnchor.constraint(equalTo: view.rightAnchor,constant: -30),
@@ -117,7 +117,7 @@ private extension MainScreenViewController {
 
 extension MainScreenViewController{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return data.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
