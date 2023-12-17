@@ -8,12 +8,6 @@
 import UIKit
 
 final class AnswerViewCell: UIControl {
-    
-    struct ViewModel {
-        let id: Int
-        let title: String
-    }
-    
     var handler: ((Int) -> Void)?
     let viewModel: ViewModel
     
@@ -61,6 +55,13 @@ final class AnswerViewCell: UIControl {
     
     @objc private func didTapSomeView() {
         handler?(viewModel.id)
+    }
+}
+
+extension AnswerViewCell {
+    struct ViewModel {
+        let id: Int
+        let title: String
     }
 }
 

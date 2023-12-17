@@ -32,12 +32,6 @@ final class QuestionViewModel {
         }
     }
     
-    struct Question {
-        let title: String
-        let answers: [String]
-        let correctAnswer: [Bool]
-    }
-    
     init() {
         self.answers = []
         self.questionIndex = 0
@@ -66,6 +60,14 @@ final class QuestionViewModel {
             return
         }
         delegate?.nextQuestion(questionNow)
+    }
+}
+
+extension QuestionViewModel {
+    struct Question {
+        let title: String
+        let answers: [String]
+        let correctAnswer: [Bool]
     }
 }
 
