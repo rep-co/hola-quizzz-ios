@@ -17,6 +17,7 @@ protocol QuestionViewModelDelegate: AnyObject {
 protocol QuestionViewModelProtocol {
     func answerForQuestion(_ index: Int) -> Bool
     func nextQuestion()
+    func questionsCount() -> Int
     func setup()
     func getTheme() -> ParticleAnimationView.Theme?
     
@@ -76,6 +77,10 @@ extension QuestionViewModel.Question {
 extension QuestionViewModel: QuestionViewModelProtocol {
     func nextQuestion() {
         questionIndex += 1
+    }
+    
+    func questionsCount() -> Int {
+        questions?.count ?? 0
     }
     
     func answerForQuestion(_ index: Int) -> Bool {

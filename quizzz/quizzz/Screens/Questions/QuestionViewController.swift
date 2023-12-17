@@ -135,6 +135,7 @@ extension QuestionViewController: QuestionViewModelDelegate {
         guard let theme = viewModel.getTheme() else { return }
         DispatchQueue.main.async { [weak self] in
             guard let self else { return }
+            self.statusView.setQuestionsCount(count: viewModel.questionsCount())
             self.emojisBackground.update(with: theme)
             viewModel.setup()
             self.view.sendSubviewToBack(self.emojisBackground)

@@ -63,6 +63,9 @@ final class QuestionStatusCollectionViewCell: UICollectionViewCell {
         case .empty:
             backgroundColor = .white.withAlphaComponent(0.6)
             numberLabel.isHidden = true
+        case .finish:
+            backgroundColor = .yellow
+            numberLabel.isHidden = true
         }
     }
 }

@@ -12,4 +12,5 @@ enum QuestionStatusCellType {
     case error
     case selected
     case empty
+    case finish
 }

@@ -10,6 +10,11 @@ import UIKit
 final class QuestionStatusView: UIView {
     private var answerTypes: [QuestionStatusCellType] = []
     private let emptyTypes: [QuestionStatusCellType] = .init(repeating: .empty, count: 7)
+    private var questionsCount = 1 {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
     
     private lazy var collectionView: UICollectionView = makeCollectionView()
     
@@ -28,6 +33,10 @@ final class QuestionStatusView: UIView {
         collectionView.reloadData()
         let indexPath = IndexPath(row: answerTypes.count, section: 0)
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+    }
+    
+    func setQuestionsCount(count: Int) {
+        questionsCount = count
     }
     
     private func setupCollectionView() {
@@ -84,9 +93,9 @@ extension QuestionStatusView: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        return answerTypes.count + 1 + emptyTypes.count
+        return questionsCount + 1
     }
-    
+
     func collectionView(
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
@@ -97,8 +106,13 @@ extension QuestionStatusView: UICollectionViewDataSource {
         ) as? QuestionStatusCollectionViewCell else {
             return UICollectionViewCell()
         }
-        
-        let allTypes = answerTypes + [.selected] + emptyTypes
+
+        var empty: [QuestionStatusCellType] = []
+        if (questionsCount - answerTypes.count) != 0 {
+            empty = .init(repeating: .empty, count: questionsCount - answerTypes.count - 1)
+        }
+
+        let allTypes = answerTypes + [.selected] + empty + [.finish]
         let row = indexPath.row
         cell.configure(with: allTypes[safe: indexPath.row] ?? .empty, row: row)
         
