@@ -12,7 +12,7 @@ struct QuizQuestionDTO: Decodable {
     let question: String
     let description: String
     let answers: [String]
-    let answersCorrectness: [Bool]
-    let multipleCorrectAnswers: Bool
+    let correct_answers: [Bool]
+    let multiple_correct_answers: Bool
     let explanation: String
 }

@@ -39,8 +39,8 @@ private extension NetworkService {
                     return
                 }
                 do {
-                    let packPreviews = try JSONDecoder().decode(T.self, from: data)
-                    continuation.resume(returning: packPreviews)
+                    let data = try JSONDecoder().decode(T.self, from: data)
+                    continuation.resume(returning: data)
                 } catch {
                     continuation.resume(throwing: error)
                 }

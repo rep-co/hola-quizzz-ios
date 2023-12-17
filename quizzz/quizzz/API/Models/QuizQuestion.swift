@@ -13,9 +13,9 @@ extension QuizQuestion {
     init(dto: QuizQuestionDTO) {
         self.id = dto.id
         self.question = dto.question
-        self.answers = dto.answers
-        self.answersCorrectness = dto.answersCorrectness
-        self.multipleCorrectAnswers = dto.multipleCorrectAnswers
+        self.answers = dto.answers.filter({ $0 != ""})
+        self.answersCorrectness = dto.correct_answers
+        self.multipleCorrectAnswers = dto.multiple_correct_answers
         self.explanation = dto.explanation
     }
 }

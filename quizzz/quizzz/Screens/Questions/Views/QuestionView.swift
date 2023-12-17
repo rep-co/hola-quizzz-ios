@@ -22,6 +22,7 @@ final class QuestionView: UIView {
     
     func configure(_ text: String) {
         questionLabel.text = text
+        questionLabel.numberOfLines = 0
     }
     
     private func setupUI() {

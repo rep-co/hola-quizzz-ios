@@ -22,7 +22,7 @@ extension Pack {
 extension Pack {
     func getTheme() -> ParticleAnimationView.Theme {
         var theme: ParticleAnimationView.Theme
-        let elements = emojis.components(separatedBy: "")
+        let elements = Array(emojis)
         let stringElements = elements.map { String($0) }
 
         theme = .init(mainImage: (stringElements[safe: 0] ?? "🐞").toImage(),

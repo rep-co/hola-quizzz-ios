@@ -24,11 +24,12 @@ extension QuestionRouter: QuestionRouterProtocol {
             message: "Question count - \(answers.count), incorrect - \(answers.filter { !$0 }.count)",
             preferredStyle: .alert
         )
-        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in close() }))
+
         controller?.present(alert, animated: true)
     }
     
     func close() {
-        controller?.dismiss(animated: true)
+        controller?.navigationController?.popViewController(animated: true)
     }
 }

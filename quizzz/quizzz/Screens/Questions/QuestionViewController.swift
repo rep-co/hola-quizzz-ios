@@ -14,12 +14,14 @@ final class QuestionViewController: UIViewController {
     private lazy var answerView: AnswerView = .init()
     private lazy var emojisBackground: ParticleAnimationView = .init()
     private lazy var backButton: UIButton = makeBackButton()
+    private lazy var logoImageView: UIImageView = makeLogoImageView()
     
     var viewModel: QuestionViewModelProtocol!
     var router: QuestionRouterProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.isNavigationBarHidden = true
         addSubviews()
         setupConstraints()
         setup()
@@ -30,26 +32,25 @@ final class QuestionViewController: UIViewController {
         emojisBackground.updateBounds()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        emojisBackground.isHidden = true
+    }
+    
     private func setup() {
         viewModel.delegate = self
-        viewModel.setup()
-        
+
         answerView.handler = { [weak self] id in
             let flag = self?.viewModel.answerForQuestion(id) ?? false
             self?.statusView.nextStep(with: flag)
             self?.viewModel.nextQuestion()
         }
-        
-        emojisBackground.update(with: .init(
-            mainImage: "🤡".toImage(),
-            secondaryImage: "🎪".toImage(),
-            tertiaryImage: "🎠".toImage()
-        ))
+        addBackgroundBlur()
     }
 
     private func addSubviews() {
         view.addSubview(emojisBackground)
         view.addSubview(backButton)
+        view.addSubview(logoImageView)
         view.addSubview(statusView)
         view.addSubview(questionView)
         view.addSubview(answerView)
@@ -61,6 +62,7 @@ final class QuestionViewController: UIViewController {
         statusView.translatesAutoresizingMaskIntoConstraints = false
         questionView.translatesAutoresizingMaskIntoConstraints = false
         answerView.translatesAutoresizingMaskIntoConstraints = false
+        logoImageView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             emojisBackground.topAnchor.constraint(equalTo: view.topAnchor),
@@ -72,6 +74,12 @@ final class QuestionViewController: UIViewController {
             backButton.widthAnchor.constraint(equalTo: backButton.heightAnchor),
             backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 36),
             backButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 26),
+
+            logoImageView.leftAnchor.constraint(equalTo: backButton.rightAnchor, constant: 10),
+            logoImageView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 20),
+            logoImageView.bottomAnchor.constraint(equalTo: statusView.topAnchor, constant: -10),
+            logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 26),
             
             statusView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             statusView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -90,12 +98,29 @@ final class QuestionViewController: UIViewController {
         ])
     }
     
+    private func addBackgroundBlur() {
+        let blurEffect = UIBlurEffect(style: .systemChromeMaterial)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blurEffectView.alpha = 0.1
+        emojisBackground.addSubview(blurEffectView)
+    }
+    
     @objc private func didTapBackButton() {
         router.close()
     }
 }
 
 extension QuestionViewController: QuestionViewModelDelegate {
+    func viewModelDidUpdate(viewModel: QuestionViewModelProtocol) {
+        guard let theme = viewModel.getTheme() else { return }
+        DispatchQueue.main.async { [weak self] in
+            self?.emojisBackground.update(with: theme)
+            viewModel.setup()
+        }
+    }
+
     func nextQuestion(_ question: QuestionViewModel.Question) {
         questionView.configure(question.title)
         answerView.configure(question.answers)
@@ -116,5 +141,12 @@ extension QuestionViewController {
         button.layer.cornerCurve = .circular
         button.addTarget(self, action: #selector(didTapBackButton), for: .touchUpInside)
         return button
+    }
+    
+    private func makeLogoImageView() -> UIImageView {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = .logoQuiz
+        return imageView
     }
 }

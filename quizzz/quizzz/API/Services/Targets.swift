@@ -14,7 +14,7 @@ enum QuizTarget: Equatable {
 
 extension QuizTarget {
     var baseURL: String {
-        return "localhost:8080"
+        return "http://localhost:8080"
     }
 
     func getPath() -> String {
@@ -22,7 +22,7 @@ extension QuizTarget {
         case .getPackPreviews:
             return baseURL + "/pack"
         case let .getPack(id):
-            return baseURL + "/packs/\(id)"
+            return baseURL + "/pack/\(id)"
         }
     }
 }

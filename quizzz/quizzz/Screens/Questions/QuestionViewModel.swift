@@ -9,6 +9,7 @@ import Foundation
 import FlyingEmojis
 
 protocol QuestionViewModelDelegate: AnyObject {
+    func viewModelDidUpdate(viewModel: QuestionViewModelProtocol)
     func nextQuestion(_ question: QuestionViewModel.Question)
     func questionOver(_ answer: [Bool])
 }
@@ -17,6 +18,7 @@ protocol QuestionViewModelProtocol {
     func answerForQuestion(_ index: Int) -> Bool
     func nextQuestion()
     func setup()
+    func getTheme() -> ParticleAnimationView.Theme?
     
     var delegate: QuestionViewModelDelegate? { get set }
 }
@@ -42,6 +44,7 @@ final class QuestionViewModel {
 
             questions = pack.questions.map { Question(with: $0) }
             theme = pack.getTheme()
+            delegate?.viewModelDidUpdate(viewModel: self)
         }
     }
     
@@ -84,5 +87,9 @@ extension QuestionViewModel: QuestionViewModelProtocol {
     
     func setup() {
         updateQuestion()
+    }
+    
+    func getTheme() -> ParticleAnimationView.Theme? {
+        return theme
     }
 }
