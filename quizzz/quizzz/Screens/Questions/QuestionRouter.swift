@@ -17,7 +17,6 @@ struct QuestionRouter {
 }
 
 // MARK: - QuestionRouterProtocol
-
 extension QuestionRouter: QuestionRouterProtocol {
     func showFinishAlert(answers: [Bool]) {
         let alert = UIAlertController(
