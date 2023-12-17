@@ -8,23 +8,34 @@
 import UIKit
 import FlyingEmojis
 
-final class MainScreenViewController: UIViewController {
-    
-    private var collection: UICollectionView?
-    
-    
-    private let label = UILabel()
-    private let imageView = UIImageView()
+final class MainScreenViewController: UIViewController,  UICollectionViewDataSource, UICollectionViewDelegate {
+    let data = [
+        MainScreenCell.Info(title: "sdfg", description: "gfd" ),
+        MainScreenCell.Info(title: "String", description: "fd" ),
+        MainScreenCell.Info(title: "String", description: "fdfd" ),
+        MainScreenCell.Info(title: "hgfd", description: "fds" ),
+        MainScreenCell.Info(title: "dfg", description: "gfd" ),
+    ]
+    private lazy var collectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        return collectionView
+    }()
+    private let titleLabel = UILabel()
+    private let logoImageView = UIImageView()
     private let emojisBackground = ParticleAnimationView()
+    private let layout = UICollectionViewFlowLayout()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         addSubvievs()
         setupConstraints()
-        setupLable()
+        setupLayout()
+        setupTitleLabel()
         setupImageView()
         setupEmojisBackground()
+        setupCollectionView()
     }
 
     override func viewDidLayoutSubviews() {
@@ -32,24 +43,26 @@ final class MainScreenViewController: UIViewController {
         emojisBackground.updateBounds()
     }
 
-    func setupLable(){
-        label.textColor = .black
-        label.text = "выбери набор"
-        label.textAlignment = .center
-        label.font = .systemFont(ofSize: 40)
+    func setupTitleLabel(){
+        titleLabel.textColor = .black
+        titleLabel.text = Text.selectPack.rawValue
+        titleLabel.textAlignment = .center
+        titleLabel.font = .systemFont(ofSize: 30)
     }
     
     func setupImageView(){
-//        imageView.image = .logo
+        logoImageView.image = .logo
     }
     
     func addSubvievs(){
-        label.translatesAutoresizingMaskIntoConstraints = false
-        imageView.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        logoImageView.translatesAutoresizingMaskIntoConstraints = false
         emojisBackground.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(emojisBackground)
-        view.addSubview(imageView)
-        view.addSubview(label)
+        view.addSubview(logoImageView)
+        view.addSubview(titleLabel)
+        view.addSubview(collectionView)
     }
 
     func setupConstraints() {
@@ -59,15 +72,20 @@ final class MainScreenViewController: UIViewController {
             emojisBackground.rightAnchor.constraint(equalTo: view.rightAnchor),
             emojisBackground.bottomAnchor.constraint(equalTo: view.bottomAnchor),
 
-            imageView.topAnchor.constraint(equalTo: view.topAnchor,constant: 100),
-            imageView.leftAnchor.constraint(equalTo: view.leftAnchor,constant: 90),
-            imageView.rightAnchor.constraint(equalTo: view.rightAnchor,constant: -90),
-            imageView.heightAnchor.constraint(equalToConstant:140),
+            logoImageView.topAnchor.constraint(equalTo: view.topAnchor,constant: 100),
+            logoImageView.leftAnchor.constraint(equalTo: view.leftAnchor,constant: 90),
+            logoImageView.rightAnchor.constraint(equalTo: view.rightAnchor,constant: -90),
+            logoImageView.heightAnchor.constraint(equalToConstant:140),
             
-            label.heightAnchor.constraint(equalToConstant:45),
-            label.leftAnchor.constraint(equalTo: view.leftAnchor,constant: 10),
-            label.rightAnchor.constraint(equalTo: view.rightAnchor,constant: -10),
-            label.bottomAnchor.constraint(equalTo: imageView.bottomAnchor,constant: 90)
+            titleLabel.heightAnchor.constraint(equalToConstant:45),
+            titleLabel.leftAnchor.constraint(equalTo: view.leftAnchor,constant: 10),
+            titleLabel.rightAnchor.constraint(equalTo: view.rightAnchor,constant: -10),
+            titleLabel.bottomAnchor.constraint(equalTo: logoImageView.bottomAnchor,constant: 90),
+            
+            collectionView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor,constant: 10),
+            collectionView.leftAnchor.constraint(equalTo: view.leftAnchor,constant: 30),
+            collectionView.rightAnchor.constraint(equalTo: view.rightAnchor,constant: -30),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
             
         ])
     }
@@ -75,31 +93,43 @@ final class MainScreenViewController: UIViewController {
 
 // MARK: - Private Methods -
 private extension MainScreenViewController {
+    func setupLayout() {
+        layout.itemSize = CGSize(width: view.frame.size.width/1.2, height: view.frame.size.width/4)
+        layout.scrollDirection = .vertical
+    }
+
     func setupEmojisBackground() {
         emojisBackground.update(with: .init(mainImage: "🤡".toImage(),
                                             secondaryImage: "🎪".toImage(),
                                             tertiaryImage: "🎠".toImage()))
     }
+
+    func setupCollectionView() {
+        collectionView.backgroundColor = .clear
+        collectionView.register(MainScreenCell.self, forCellWithReuseIdentifier: MainScreenCell.identifier)
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.frame = view.bounds
+        collectionView.collectionViewLayout = layout
+        collectionView.showsVerticalScrollIndicator = false
+    }
 }
 
 extension MainScreenViewController{
-    
-//    func setupCollectionView(){
-//        collectionView.delegate = self
-//        collectionView.dataSource = self
-//    }
-    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainScreenCell.identifier, for: indexPath) as? MainScreenCell
+        else { return UICollectionViewCell() }
+        cell.data = self.data[indexPath.row]
+        return cell
+    }
 }
 
-//
-//extension MainScreenViewController: UICollectionViewDataSource, UICollectionViewDelegate {
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        <#code#>
-//    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        <#code#>
-//    }
-//    
-//    
-//}
+extension MainScreenViewController {
+    enum Text: String {
+       case selectPack = "SELECT PACK"
+    }
+}
