@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FlyingEmojis
 
 protocol QuestionViewModelDelegate: AnyObject {
     func nextQuestion(_ question: QuestionViewModel.Question)
@@ -21,41 +22,31 @@ protocol QuestionViewModelProtocol {
 }
 
 final class QuestionViewModel {
+    private let networkService: NetworkService = .shared
     weak var delegate: QuestionViewModelDelegate?
     
-    private let questions: [Question]
+    private var questions: [Question]?
+    private var theme: ParticleAnimationView.Theme?
     
-    private var answers: [Bool]
-    private var questionIndex: Int {
+    private var answers: [Bool] = []
+    private var questionIndex: Int = 0 {
         didSet {
             updateQuestion()
         }
     }
     
-    init() {
-        self.answers = []
-        self.questionIndex = 0
-        self.questions = [
-            .init(
-                title: "Кто любит бибки?",
-                answers: ["Ваня", "Сережа", "Саня", "Кто то"],
-                correctAnswer: [true, false, false, false]
-            ),
-            .init(
-                title: "Кто любит попки?",
-                answers: ["Ваня", "Сережа", "Саня"],
-                correctAnswer: [false, true, false]
-            ),
-            .init(
-                title: "Кто любит мам?",
-                answers: ["Ваня", "Сережа"],
-                correctAnswer: [true, true]
-            ),
-        ]
+    init(id: Int) {
+        Task {
+            let packDTO = try await networkService.getPack(with: id)
+            let pack = Pack(dto: packDTO)
+
+            questions = pack.questions.map { Question(with: $0) }
+            theme = pack.getTheme()
+        }
     }
     
     private func updateQuestion() {
-        guard let questionNow = questions[safe: questionIndex] else {
+        guard let questionNow = questions?[safe: questionIndex] else {
             delegate?.questionOver(answers)
             return
         }
@@ -71,13 +62,21 @@ extension QuestionViewModel {
     }
 }
 
+extension QuestionViewModel.Question {
+    init(with question: QuizQuestion) {
+        self.title = question.question
+        self.answers = question.answers
+        self.correctAnswer = question.answersCorrectness
+    }
+}
+
 extension QuestionViewModel: QuestionViewModelProtocol {
     func nextQuestion() {
         questionIndex += 1
     }
     
     func answerForQuestion(_ index: Int) -> Bool {
-        guard let questionNow = questions[safe: questionIndex] else { return false }
+        guard let questionNow = questions?[safe: questionIndex] else { return false }
         let flag = questionNow.correctAnswer[safe: index] ?? false
         answers.append(flag)
         return flag
