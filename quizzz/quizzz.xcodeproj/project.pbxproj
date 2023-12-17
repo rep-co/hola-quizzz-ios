@@ -29,6 +29,11 @@
 		B4B317D62B2E0474005FA6C4 /* RuleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B317D52B2E0474005FA6C4 /* RuleCollectionViewCell.swift */; };
 		B4B317D82B2E04D2005FA6C4 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B317D72B2E04D2005FA6C4 /* RulesViewController.swift */; };
 		B4B317DB2B2E0A44005FA6C4 /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B317DA2B2E0A44005FA6C4 /* Vibration.swift */; };
+		B4E092EB2B2F5D1100051792 /* QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E092EA2B2F5D1100051792 /* QuizQuestion.swift */; };
+		B4E092ED2B2F5D6200051792 /* PackPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E092EC2B2F5D6200051792 /* PackPreview.swift */; };
+		B4E092EF2B2F5D8800051792 /* Pack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E092EE2B2F5D8800051792 /* Pack.swift */; };
+		B4E092F12B2F5EBF00051792 /* UIImage+assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E092F02B2F5EBF00051792 /* UIImage+assets.swift */; };
+		B4E092F32B2F5F1600051792 /* UIColor+assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E092F22B2F5F1600051792 /* UIColor+assets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +62,11 @@
 		B4B317D52B2E0474005FA6C4 /* RuleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleCollectionViewCell.swift; sourceTree = "<group>"; };
 		B4B317D72B2E04D2005FA6C4 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		B4B317DA2B2E0A44005FA6C4 /* Vibration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibration.swift; sourceTree = "<group>"; };
+		B4E092EA2B2F5D1100051792 /* QuizQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestion.swift; sourceTree = "<group>"; };
+		B4E092EC2B2F5D6200051792 /* PackPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackPreview.swift; sourceTree = "<group>"; };
+		B4E092EE2B2F5D8800051792 /* Pack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pack.swift; sourceTree = "<group>"; };
+		B4E092F02B2F5EBF00051792 /* UIImage+assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+assets.swift"; sourceTree = "<group>"; };
+		B4E092F22B2F5F1600051792 /* UIColor+assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+assets.swift"; sourceTree = "<group>"; };
 		B83E7A68CCA3F8F04C24E6AC /* Pods-quizzz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quizzz.release.xcconfig"; path = "Target Support Files/Pods-quizzz/Pods-quizzz.release.xcconfig"; sourceTree = "<group>"; };
 		E18490FD38A729BBC0624AB7 /* libPods-quizzz.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-quizzz.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -144,6 +154,8 @@
 			children = (
 				B4B317DA2B2E0A44005FA6C4 /* Vibration.swift */,
 				A67A69622B2E08C8002B59DF /* Collection+safe.swift */,
+				B4E092F02B2F5EBF00051792 /* UIImage+assets.swift */,
+				B4E092F22B2F5F1600051792 /* UIColor+assets.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -151,7 +163,8 @@
 		A713816D2B2F0EC0003613B7 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				A713817A2B2F5048003613B7 /* Models */,
+				B4E092E92B2F5CEE00051792 /* Models */,
+				A713817A2B2F5048003613B7 /* DTOModels */,
 				A71381732B2F1B9E003613B7 /* Services */,
 			);
 			path = API;
@@ -166,14 +179,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		A713817A2B2F5048003613B7 /* Models */ = {
+		A713817A2B2F5048003613B7 /* DTOModels */ = {
 			isa = PBXGroup;
 			children = (
 				A71381702B2F1793003613B7 /* PackPreviewDTO.swift */,
 				A713817B2B2F52E0003613B7 /* PackDTO.swift */,
 				A71381782B2F5006003613B7 /* QuizQuestionDTO.swift */,
 			);
-			path = Models;
+			path = DTOModels;
 			sourceTree = "<group>";
 		};
 		A7F247602B2DCBEE00A267E5 /* MainScreen */ = {
@@ -215,6 +228,16 @@
 				A676A2B62B2D9A54002DA5F4 /* Info.plist */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B4E092E92B2F5CEE00051792 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B4E092EA2B2F5D1100051792 /* QuizQuestion.swift */,
+				B4E092EC2B2F5D6200051792 /* PackPreview.swift */,
+				B4E092EE2B2F5D8800051792 /* Pack.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F099A1111B1E292A49332839 /* Pods */ = {
@@ -322,7 +345,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4E092ED2B2F5D6200051792 /* PackPreview.swift in Sources */,
 				B4B317DB2B2E0A44005FA6C4 /* Vibration.swift in Sources */,
+				B4E092F32B2F5F1600051792 /* UIColor+assets.swift in Sources */,
 				B4B317D82B2E04D2005FA6C4 /* RulesViewController.swift in Sources */,
 				A713817C2B2F52E0003613B7 /* PackDTO.swift in Sources */,
 				A676A2AD2B2D9A52002DA5F4 /* MainScreenViewController.swift in Sources */,
@@ -330,14 +355,17 @@
 				A71381792B2F5006003613B7 /* QuizQuestionDTO.swift in Sources */,
 				A67A695C2B2E08C0002B59DF /* QuestionViewController.swift in Sources */,
 				A713817E2B2F545A003613B7 /* Targets.swift in Sources */,
+				B4E092F12B2F5EBF00051792 /* UIImage+assets.swift in Sources */,
 				A71381772B2F31F8003613B7 /* Services.swift in Sources */,
 				A7F247622B2DCC0B00A267E5 /* MainScreenCell.swift in Sources */,
 				B4B317D62B2E0474005FA6C4 /* RuleCollectionViewCell.swift in Sources */,
 				A67A695F2B2E08C0002B59DF /* QuestionStatusCollectionViewCell.swift in Sources */,
 				A676A2A92B2D9A52002DA5F4 /* AppDelegate.swift in Sources */,
 				A67A69642B2E08C8002B59DF /* Collection+safe.swift in Sources */,
+				B4E092EB2B2F5D1100051792 /* QuizQuestion.swift in Sources */,
 				A67A69602B2E08C0002B59DF /* TopAlignedCollectionViewFlowLayout.swift in Sources */,
 				A71381712B2F1793003613B7 /* PackPreviewDTO.swift in Sources */,
+				B4E092EF2B2F5D8800051792 /* Pack.swift in Sources */,
 				A676A2AB2B2D9A52002DA5F4 /* SceneDelegate.swift in Sources */,
 				B4B317D42B2E0421005FA6C4 /* RuleView.swift in Sources */,
 				A67A695D2B2E08C0002B59DF /* QuestionStatusCellType.swift in Sources */,
@@ -485,7 +513,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BBS89ZG54H;
+				DEVELOPMENT_TEAM = K76H2H6746;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = quizzz/Helpers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -514,7 +542,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BBS89ZG54H;
+				DEVELOPMENT_TEAM = K76H2H6746;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = quizzz/Helpers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

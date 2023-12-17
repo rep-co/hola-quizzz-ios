@@ -13,5 +13,3 @@ struct PackPreviewDTO: Decodable {
     let description: String
     let category: String
 }
-
-

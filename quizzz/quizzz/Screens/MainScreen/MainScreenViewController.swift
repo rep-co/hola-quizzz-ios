@@ -9,7 +9,7 @@ import UIKit
 import FlyingEmojis
 
 final class MainScreenViewController: UIViewController,  UICollectionViewDataSource, UICollectionViewDelegate {
-    var data: [MainScreenCell.Info] = []
+    private var packPreviews: [PackPreview]?
     private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -19,9 +19,16 @@ final class MainScreenViewController: UIViewController,  UICollectionViewDataSou
     private let logoImageView = UIImageView()
     private let emojisBackground = ParticleAnimationView()
     private let layout = UICollectionViewFlowLayout()
+    private let networkService: NetworkService = .shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        Task {
+            let packPreviewsDTO = try await networkService.getPackPreviews()
+            packPreviews = packPreviewsDTO.map { PackPreview(dto: $0) }
+            collectionView.reloadData()
+        }
+
         view.backgroundColor = .white
         addSubvievs()
         setupConstraints()
@@ -30,12 +37,6 @@ final class MainScreenViewController: UIViewController,  UICollectionViewDataSou
         setupImageView()
         setupEmojisBackground()
         setupCollectionView()
-
-        connectionDidFinishLoading { questions in
-            for i in questions {
-                self.data.append(.init(title: i.name, description: i.description))
-            }
-        }
     }
 
     override func viewDidLayoutSubviews() {
@@ -117,13 +118,15 @@ private extension MainScreenViewController {
 
 extension MainScreenViewController{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
+        return packPreviews?.count ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainScreenCell.identifier, for: indexPath) as? MainScreenCell
-        else { return UICollectionViewCell() }
-        cell.data = self.data[indexPath.row]
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainScreenCell.identifier,
+                                                            for: indexPath) as? MainScreenCell,
+              let packPreviews,
+              let packPreview = packPreviews[safe: indexPath.row] else { return UICollectionViewCell() }
+        cell.data = .init(title: packPreview.name, description: packPreview.description)
         return cell
     }
 }
