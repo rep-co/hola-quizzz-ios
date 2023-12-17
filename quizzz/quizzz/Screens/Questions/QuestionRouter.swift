@@ -21,7 +21,7 @@ extension QuestionRouter: QuestionRouterProtocol {
     func showFinishAlert(answers: [Bool]) {
         let alert = UIAlertController(
             title: "The End",
-            message: "Question count - \(answers.count), lose - \(answers.filter { !$0 }.count)",
+            message: "Question count - \(answers.count), incorrect - \(answers.filter { !$0 }.count)",
             preferredStyle: .alert
         )
         
