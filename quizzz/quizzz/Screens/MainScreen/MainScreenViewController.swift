@@ -76,7 +76,7 @@ final class MainScreenViewController: UIViewController,  UICollectionViewDataSou
             logoImageView.topAnchor.constraint(equalTo: view.topAnchor,constant: 100),
             logoImageView.leftAnchor.constraint(equalTo: view.leftAnchor,constant: 90),
             logoImageView.rightAnchor.constraint(equalTo: view.rightAnchor,constant: -90),
-            logoImageView.heightAnchor.constraint(equalToConstant:140),
+            logoImageView.heightAnchor.constraint(equalToConstant:150),
 
             titleLabel.heightAnchor.constraint(equalToConstant:45),
             titleLabel.leftAnchor.constraint(equalTo: view.leftAnchor,constant: 10),
