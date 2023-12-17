@@ -52,7 +52,7 @@ final class MainScreenViewController: UIViewController,  UICollectionViewDataSou
     }
 
     func setupImageView(){
-        logoImageView.image = .logo
+        logoImageView.image = .logoQuiz
     }
 
     func addSubvievs(){

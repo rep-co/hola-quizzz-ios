@@ -1,6 +1,6 @@
 import UIKit
 
 extension UIColor {
-    static let repcoGreen = UIColor.green
-    static let repcoRed = UIColor.red
+    static let quizGreen = UIColor(named: "repcoGreen")
+    static let quizRed = UIColor(named: "repcoRed")
 }
