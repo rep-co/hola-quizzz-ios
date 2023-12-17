@@ -9,7 +9,6 @@ import UIKit
 import FlyingEmojis
 
 final class QuestionViewController: UIViewController {
-    
     private lazy var statusView: QuestionStatusView = .init(frame: .zero)
     private lazy var questionView: QuestionView = .init()
     private lazy var answerView: AnswerView = .init()
