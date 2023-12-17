@@ -14,7 +14,7 @@ enum QuizTarget: Equatable {
 
 extension QuizTarget {
     var baseURL: String {
-        return "https://d5d7vsrgb1co3mce40uu.apigw.yandexcloud.net"
+        return "localhost:8080"
     }
 
     func getPath() -> String {

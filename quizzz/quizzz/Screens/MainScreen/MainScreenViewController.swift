@@ -100,9 +100,9 @@ private extension MainScreenViewController {
     }
 
     func setupEmojisBackground() {
-        emojisBackground.update(with: .init(mainImage: "🤡".toImage(),
-                                            secondaryImage: "🎪".toImage(),
-                                            tertiaryImage: "🎠".toImage()))
+        emojisBackground.update(with: .init(mainImage: "🧠".toImage(),
+                                            secondaryImage: "🧟‍♂️".toImage(),
+                                            tertiaryImage: "🔪".toImage()))
     }
 
     func setupCollectionView() {

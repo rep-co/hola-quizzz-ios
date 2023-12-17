@@ -31,6 +31,7 @@ private extension NetworkService {
             URLSession.shared.dataTask(with: url) { data, respone, error in
                 if let error = error {
                     continuation.resume(throwing: error)
+                    return
                 }
 
                 guard let data = data else {
