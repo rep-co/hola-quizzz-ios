@@ -19,21 +19,22 @@
 		A67A695F2B2E08C0002B59DF /* QuestionStatusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A695A2B2E08C0002B59DF /* QuestionStatusCollectionViewCell.swift */; };
 		A67A69602B2E08C0002B59DF /* TopAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A695B2B2E08C0002B59DF /* TopAlignedCollectionViewFlowLayout.swift */; };
 		A67A69642B2E08C8002B59DF /* Collection+safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A69622B2E08C8002B59DF /* Collection+safe.swift */; };
-		A71381712B2F1793003613B7 /* PackPreviewDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71381702B2F1793003613B7 /* PackPreviewDTO.swift */; };
-		A71381772B2F31F8003613B7 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71381762B2F31F8003613B7 /* Services.swift */; };
-		A71381792B2F5006003613B7 /* QuizQuestionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71381782B2F5006003613B7 /* QuizQuestionDTO.swift */; };
-		A713817C2B2F52E0003613B7 /* PackDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713817B2B2F52E0003613B7 /* PackDTO.swift */; };
-		A713817E2B2F545A003613B7 /* Targets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713817D2B2F545A003613B7 /* Targets.swift */; };
 		A67A69672B2EFA08002B59DF /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A69662B2EFA08002B59DF /* QuestionView.swift */; };
 		A67A69692B2EFCD9002B59DF /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A69682B2EFCD9002B59DF /* AnswerView.swift */; };
 		A67A696C2B2EFE30002B59DF /* AnswerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A696B2B2EFE30002B59DF /* AnswerViewCell.swift */; };
 		A67A696E2B2F0719002B59DF /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A696D2B2F0719002B59DF /* QuestionViewModel.swift */; };
 		A67A69702B2F0FCD002B59DF /* QuestionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A696F2B2F0FCD002B59DF /* QuestionRouter.swift */; };
+		A71381712B2F1793003613B7 /* PackPreviewDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71381702B2F1793003613B7 /* PackPreviewDTO.swift */; };
+		A71381772B2F31F8003613B7 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71381762B2F31F8003613B7 /* Services.swift */; };
+		A71381792B2F5006003613B7 /* QuizQuestionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71381782B2F5006003613B7 /* QuizQuestionDTO.swift */; };
+		A713817C2B2F52E0003613B7 /* PackDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713817B2B2F52E0003613B7 /* PackDTO.swift */; };
+		A713817E2B2F545A003613B7 /* Targets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713817D2B2F545A003613B7 /* Targets.swift */; };
 		A7F247622B2DCC0B00A267E5 /* MainScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F247612B2DCC0B00A267E5 /* MainScreenCell.swift */; };
 		B4B317D42B2E0421005FA6C4 /* RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B317D32B2E0421005FA6C4 /* RuleView.swift */; };
 		B4B317D62B2E0474005FA6C4 /* RuleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B317D52B2E0474005FA6C4 /* RuleCollectionViewCell.swift */; };
 		B4B317D82B2E04D2005FA6C4 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B317D72B2E04D2005FA6C4 /* RulesViewController.swift */; };
 		B4B317DB2B2E0A44005FA6C4 /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B317DA2B2E0A44005FA6C4 /* Vibration.swift */; };
+		B4CE956B2B2F6CAF00A547CC /* MainScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CE956A2B2F6CAF00A547CC /* MainScreenRouter.swift */; };
 		B4E092EB2B2F5D1100051792 /* QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E092EA2B2F5D1100051792 /* QuizQuestion.swift */; };
 		B4E092ED2B2F5D6200051792 /* PackPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E092EC2B2F5D6200051792 /* PackPreview.swift */; };
 		B4E092EF2B2F5D8800051792 /* Pack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E092EE2B2F5D8800051792 /* Pack.swift */; };
@@ -56,22 +57,23 @@
 		A67A695A2B2E08C0002B59DF /* QuestionStatusCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionStatusCollectionViewCell.swift; sourceTree = "<group>"; };
 		A67A695B2B2E08C0002B59DF /* TopAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		A67A69622B2E08C8002B59DF /* Collection+safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+safe.swift"; sourceTree = "<group>"; };
-		A71381702B2F1793003613B7 /* PackPreviewDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackPreviewDTO.swift; sourceTree = "<group>"; };
-		A71381762B2F31F8003613B7 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
-		A71381782B2F5006003613B7 /* QuizQuestionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestionDTO.swift; sourceTree = "<group>"; };
-		A713817B2B2F52E0003613B7 /* PackDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackDTO.swift; sourceTree = "<group>"; };
-		A713817D2B2F545A003613B7 /* Targets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Targets.swift; sourceTree = "<group>"; };
 		A67A69662B2EFA08002B59DF /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		A67A69682B2EFCD9002B59DF /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
 		A67A696B2B2EFE30002B59DF /* AnswerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewCell.swift; sourceTree = "<group>"; };
 		A67A696D2B2F0719002B59DF /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
 		A67A696F2B2F0FCD002B59DF /* QuestionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionRouter.swift; sourceTree = "<group>"; };
+		A71381702B2F1793003613B7 /* PackPreviewDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackPreviewDTO.swift; sourceTree = "<group>"; };
+		A71381762B2F31F8003613B7 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		A71381782B2F5006003613B7 /* QuizQuestionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestionDTO.swift; sourceTree = "<group>"; };
+		A713817B2B2F52E0003613B7 /* PackDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackDTO.swift; sourceTree = "<group>"; };
+		A713817D2B2F545A003613B7 /* Targets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Targets.swift; sourceTree = "<group>"; };
 		A7F247612B2DCC0B00A267E5 /* MainScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCell.swift; sourceTree = "<group>"; };
 		B4B317CD2B2DEEAA005FA6C4 /* FlyingEmojis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FlyingEmojis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B317D32B2E0421005FA6C4 /* RuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleView.swift; sourceTree = "<group>"; };
 		B4B317D52B2E0474005FA6C4 /* RuleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleCollectionViewCell.swift; sourceTree = "<group>"; };
 		B4B317D72B2E04D2005FA6C4 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		B4B317DA2B2E0A44005FA6C4 /* Vibration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibration.swift; sourceTree = "<group>"; };
+		B4CE956A2B2F6CAF00A547CC /* MainScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenRouter.swift; sourceTree = "<group>"; };
 		B4E092EA2B2F5D1100051792 /* QuizQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestion.swift; sourceTree = "<group>"; };
 		B4E092EC2B2F5D6200051792 /* PackPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackPreview.swift; sourceTree = "<group>"; };
 		B4E092EE2B2F5D8800051792 /* Pack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pack.swift; sourceTree = "<group>"; };
@@ -174,6 +176,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		A67A696A2B2EFE17002B59DF /* AnswerView */ = {
+			isa = PBXGroup;
+			children = (
+				A67A69682B2EFCD9002B59DF /* AnswerView.swift */,
+				A67A696B2B2EFE30002B59DF /* AnswerViewCell.swift */,
+			);
+			path = AnswerView;
+			sourceTree = "<group>";
+		};
 		A713816D2B2F0EC0003613B7 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,20 +214,12 @@
 			path = DTOModels;
 			sourceTree = "<group>";
 		};
-		A67A696A2B2EFE17002B59DF /* AnswerView */ = {
-			isa = PBXGroup;
-			children = (
-				A67A69682B2EFCD9002B59DF /* AnswerView.swift */,
-				A67A696B2B2EFE30002B59DF /* AnswerViewCell.swift */,
-			);
-			path = AnswerView;
-			sourceTree = "<group>";
-		};
-        A7F247602B2DCBEE00A267E5 /* MainScreen */ = {
+		A7F247602B2DCBEE00A267E5 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
 				A676A2AC2B2D9A52002DA5F4 /* MainScreenViewController.swift */,
 				A7F247612B2DCC0B00A267E5 /* MainScreenCell.swift */,
+				B4CE956A2B2F6CAF00A547CC /* MainScreenRouter.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				B4E092ED2B2F5D6200051792 /* PackPreview.swift in Sources */,
 				B4B317DB2B2E0A44005FA6C4 /* Vibration.swift in Sources */,
 				B4E092F32B2F5F1600051792 /* UIColor+assets.swift in Sources */,
+				B4CE956B2B2F6CAF00A547CC /* MainScreenRouter.swift in Sources */,
 				B4B317D82B2E04D2005FA6C4 /* RulesViewController.swift in Sources */,
 				A713817C2B2F52E0003613B7 /* PackDTO.swift in Sources */,
 				A676A2AD2B2D9A52002DA5F4 /* MainScreenViewController.swift in Sources */,

@@ -20,6 +20,7 @@ final class MainScreenViewController: UIViewController,  UICollectionViewDataSou
     private let emojisBackground = ParticleAnimationView()
     private let layout = UICollectionViewFlowLayout()
     private let networkService: NetworkService = .shared
+    var router: MainRouter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,6 @@ final class MainScreenViewController: UIViewController,  UICollectionViewDataSou
             packPreviews = packPreviewsDTO.map { PackPreview(dto: $0) }
             collectionView.reloadData()
         }
-
         view.backgroundColor = .white
         addSubvievs()
         setupConstraints()
@@ -128,6 +128,11 @@ extension MainScreenViewController{
               let packPreview = packPreviews[safe: indexPath.row] else { return UICollectionViewCell() }
         cell.data = .init(title: packPreview.name, description: packPreview.description)
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let id = packPreviews?[indexPath.row].id else { return }
+        router.openQuizViewController(with: id)
     }
 }
 
